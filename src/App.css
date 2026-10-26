@@ -216,10 +216,10 @@
 
 .section-nav ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.section-nav a {
+.section-nav button {
   position: relative;
   display: flex;
   align-items: center;
@@ -230,9 +230,15 @@
   font-weight: 600;
   text-decoration: none;
   transition: color 200ms var(--ease-out);
+
+  /*  */
+  width: 100%;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
 
-.section-nav a::after {
+.section-nav button::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -245,16 +251,31 @@
   transition: transform 250ms var(--ease-out);
 }
 
-.section-nav a:hover {
+.section-nav button:hover {
   color: var(--white);
 }
 
-.section-nav a[aria-current="true"] {
+.section-nav button[aria-current="page"] {
   color: var(--gold-300);
 }
 
-.section-nav a[aria-current="true"]::after {
+.section-nav button[aria-current="page"]::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+/* Page switch: the new page fades and rises in */
+@media (prefers-reduced-motion: no-preference) {
+  .page-view {
+    animation: page-in 250ms var(--ease-out);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(3px);
+  }
 }
 
 /* =========================================================

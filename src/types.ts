@@ -84,3 +84,5 @@ export type PubInfo = {
   hours: WeekHours;
   legal: { imprintUrl: string; privacyUrl: string };
 };
+
+export type Page = "menu" | "events" | "hours";
