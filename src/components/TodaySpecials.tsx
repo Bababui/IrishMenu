@@ -2,6 +2,7 @@ import type { UiText } from "../i18n";
 import { formatPrice, longDate } from "../lib/format";
 import type { Lang, Offer } from "../types";
 import { Clover } from "./Icons";
+import { Leprechaun } from "./Ornaments";
 import SectionHeading from "./SectionHeading";
 
 type TodaySpecialsProps = {
@@ -19,6 +20,10 @@ function TodaySpecials({ offers, day, lang, t }: TodaySpecialsProps) {
       <SectionHeading id="heute-title">{t.todayTitle}</SectionHeading>
 
       <div className="specials-board">
+        {/* a leprechaun keeps watch over the lucky specials */}
+        <span className="leprechaun-peek" aria-hidden>
+          <Leprechaun className="leprechaun" />
+        </span>
         <p className="specials-date">{longDate(day, lang)}</p>
 
         {offers.length === 0 ? (

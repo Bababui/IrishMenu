@@ -3,6 +3,7 @@ import { formatTime, weekdayName } from "../lib/format";
 import type { OpenStatus } from "../lib/time";
 import type { Lang, PubInfo } from "../types";
 import { Shamrock } from "./Icons";
+import { TrinityKnot } from "./Ornaments";
 
 type MastheadProps = {
   pub: PubInfo;
@@ -16,6 +17,8 @@ function Masthead({ pub, status, lang, t }: MastheadProps) {
   return (
     <header className="masthead">
       <div className="sign-board">
+        <span className="knot-band sign-knot sign-knot--top" aria-hidden />
+        <span className="knot-band sign-knot sign-knot--bottom" aria-hidden />
         <div className="sign-flourish" aria-hidden>
           <span className="sign-rule" />
           <Shamrock className="sign-shamrock sign-shamrock--small" />
@@ -24,7 +27,11 @@ function Masthead({ pub, status, lang, t }: MastheadProps) {
           <span className="sign-rule" />
         </div>
         <h1 className="sign-name">{pub.name}</h1>
-        <p className="sign-town">{pub.town}</p>
+        <p className="sign-town">
+          <TrinityKnot className="sign-trinity" />
+          {pub.town}
+          <TrinityKnot className="sign-trinity" />
+        </p>
         <p className="sign-tagline">{pub.tagline[lang]}</p>
       </div>
 

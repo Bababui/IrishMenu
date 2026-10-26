@@ -63,6 +63,7 @@ function Visit({ pub, t, showExampleNote }: VisitProps) {
       </address>
 
       <footer className="page-footer">
+        <span className="knot-band footer-knot" aria-hidden />
         <Shamrock className="footer-shamrock" />
         <p>{t.orderAtBar}</p>
         <p className="footer-links">
