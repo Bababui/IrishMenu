@@ -1,3 +1,7 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+[build.environment]
+  # Vite needs a recent Node.js version
+  NODE_VERSION = "22"
