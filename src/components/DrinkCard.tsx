@@ -1,19 +1,31 @@
-import type { Drink } from "../types";
+import { formatPrice } from "../lib/format";
+import type { Drink, Lang } from "../types";
 
-//This is a component for one drink card. 
-// It takes a drink object as a prop and displays its name and price.
+// One drink on the menu, set like a printed price list:
+// name, dotted line, then size and price for each serving.
 type DrinkCardProps = {
   drink: Drink;
+  lang: Lang;
 };
 
-function DrinkCard({ drink }: DrinkCardProps) {
+function DrinkCard({ drink, lang }: DrinkCardProps) {
   return (
-    <li>
-      {drink.name} -{" "}
-      {drink.price.toLocaleString("de-DE", {
-        style: "currency",
-        currency: "EUR",
-      })}
+    <li className="drink">
+      <p className="drink-name">
+        <span>{drink.name}</span>
+        <span className="drink-leader" aria-hidden />
+      </p>
+      {drink.description && (
+        <p className="drink-desc">{drink.description[lang]}</p>
+      )}
+      <ul className="drink-servings">
+        {drink.servings.map((serving, i) => (
+          <li key={i}>
+            {serving.size && <span className="drink-size">{serving.size}</span>}
+            <span className="price">{formatPrice(serving.price, lang)}</span>
+          </li>
+        ))}
+      </ul>
     </li>
   );
 }

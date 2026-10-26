@@ -1,0 +1,792 @@
+/* =========================================================
+   Layout
+   ========================================================= */
+.topbar,
+.masthead,
+.page,
+.section-nav ul {
+  width: 100%;
+  max-width: 36rem;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: max(12px, env(safe-area-inset-top));
+}
+
+/* =========================================================
+   Language toggle
+   ========================================================= */
+.lang-toggle {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--gold-700);
+}
+
+.lang-toggle button {
+  min-width: 2.75rem;
+  height: 2.375rem;
+  padding: 0 0.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--mist);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition:
+    background-color 200ms var(--ease-out),
+    color 200ms var(--ease-out);
+}
+
+.lang-toggle button:hover {
+  color: var(--white);
+}
+
+.lang-toggle button[aria-pressed="true"] {
+  background: var(--gold-500);
+  color: var(--green-950);
+}
+
+/* =========================================================
+   Masthead: the painted pub sign
+   ========================================================= */
+.masthead {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.sign-board {
+  position: relative;
+  padding: 1.5rem 1.25rem 2.25rem;
+  border-radius: 14px;
+  background: var(--green-800);
+  /* double gold pinstripe, like a signwriter's border */
+  border: 2px solid var(--gold-500);
+  box-shadow:
+    inset 0 0 0 5px var(--green-800),
+    inset 0 0 0 6px var(--gold-600),
+    0 18px 40px -20px rgb(0 0 0 / 0.7);
+}
+
+.sign-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: var(--gold-500);
+}
+
+.sign-rule {
+  flex: 0 1 3.5rem;
+  height: 1px;
+  background: var(--gold-600);
+}
+
+.sign-shamrock {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.sign-shamrock--small {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--gold-600);
+}
+
+.sign-name {
+  margin-top: 0.75rem;
+  font-family: var(--font-sign);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 11.5vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  color: var(--gold-400);
+  text-shadow:
+    0 -1px 0 rgb(255 236 190 / 0.25),
+    0.045em 0.06em 0 var(--shade);
+}
+
+.sign-town {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.55rem;
+  font-family: var(--font-sign);
+  font-size: 0.9375rem;
+  letter-spacing: 0.14em;
+  color: var(--white);
+}
+
+.sign-town::before,
+.sign-town::after {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: var(--gold-600);
+}
+
+.sign-tagline {
+  margin-top: 0.85rem;
+  color: var(--mist);
+  font-size: 1rem;
+}
+
+/* Open/closed plaque that hangs over the bottom edge of the sign */
+.status-plaque {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: -1.3rem;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  background: var(--green-950);
+  box-shadow:
+    inset 0 0 0 1px var(--gold-600),
+    0 8px 18px -10px rgb(0 0 0 / 0.8);
+  font-size: 0.9375rem;
+  color: var(--mist);
+}
+
+.status-plaque strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--mist);
+}
+
+.status-plaque.is-open .status-dot {
+  background: var(--green-lucky);
+}
+
+/* One entrance moment on first load: the sign appears like fresh gold leaf. */
+@media (prefers-reduced-motion: no-preference) {
+  .sign-board > *,
+  .status-plaque {
+    animation: sign-in 700ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  }
+  .sign-name {
+    animation-delay: 80ms;
+  }
+  .sign-town {
+    animation-delay: 160ms;
+  }
+  .sign-tagline {
+    animation-delay: 240ms;
+  }
+  .status-plaque {
+    animation-delay: 360ms;
+  }
+}
+
+@keyframes sign-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+  }
+}
+
+/* =========================================================
+   Sticky section navigation
+   ========================================================= */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-top: 1.5rem;
+  background: var(--green-950);
+  box-shadow:
+    0 1px 0 var(--gold-700),
+    0 10px 20px -16px rgb(0 0 0 / 0.9);
+}
+
+.section-nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-height);
+  color: var(--mist);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 200ms var(--ease-out);
+}
+
+.section-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.55rem;
+  width: 1.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold-400);
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 250ms var(--ease-out);
+}
+
+.section-nav a:hover {
+  color: var(--white);
+}
+
+.section-nav a[aria-current="true"] {
+  color: var(--gold-300);
+}
+
+.section-nav a[aria-current="true"]::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* =========================================================
+   Sections
+   ========================================================= */
+.section {
+  padding-top: 2.5rem;
+  scroll-margin-top: calc(var(--nav-height) + 0.25rem);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+  font-family: var(--font-sign);
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--gold-400);
+  text-shadow: 0.05em 0.06em 0 var(--shade);
+}
+
+.section-heading-shamrock {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--gold-500);
+}
+
+.section-heading-text {
+  flex: none;
+}
+
+/* double rule running to the edge, same as the sign's pinstripe */
+.section-heading-rule {
+  flex: 1;
+  height: 4px;
+  border-top: 1px solid var(--gold-600);
+  border-bottom: 1px solid var(--gold-700);
+}
+
+.empty-note {
+  color: var(--mist);
+}
+
+/* =========================================================
+   Today's specials
+   ========================================================= */
+.specials-board {
+  padding: 1rem 1.1rem 0.4rem;
+  border-radius: 14px;
+  background: var(--green-800);
+  box-shadow:
+    inset 0 0 0 1px var(--gold-600),
+    0 14px 30px -20px rgb(0 0 0 / 0.8);
+}
+
+.specials-date {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgb(210 166 70 / 0.22);
+  color: var(--mist);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.specials-empty {
+  padding: 1rem 0 1.1rem;
+  color: var(--mist);
+}
+
+.special {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.75rem;
+  padding: 0.9rem 0;
+}
+
+.special + .special {
+  border-top: 1px solid rgb(210 166 70 / 0.14);
+}
+
+.special-clover {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 0.05rem;
+  color: var(--green-lucky);
+}
+
+.special-title {
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.special-note {
+  margin-top: 0.15rem;
+  color: var(--mist);
+  font-size: 0.9375rem;
+}
+
+.special-price {
+  display: grid;
+  justify-items: end;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--gold-400);
+}
+
+.special-regular {
+  color: var(--mist);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.special-regular s {
+  text-decoration-thickness: 1.5px;
+}
+
+/* =========================================================
+   Menu
+   ========================================================= */
+.filter-scroller {
+  margin-inline: -16px;
+  padding: 2px 16px 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.filter-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-scroller[data-fade="end"] {
+  mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent);
+}
+
+.filter-scroller[data-fade="start"] {
+  mask-image: linear-gradient(to left, #000 calc(100% - 3rem), transparent);
+}
+
+.filter-scroller[data-fade="both"] {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 3rem,
+    #000 calc(100% - 3rem),
+    transparent
+  );
+}
+
+/* On wider screens the bar stays inside the content column. */
+@media (min-width: 36rem) {
+  .filter-scroller {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
+
+.filter-bar {
+  position: relative;
+  display: inline-flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--green-950);
+  box-shadow: inset 0 0 0 1px var(--gold-700);
+}
+
+.filter-pill {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 0;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: var(--gold-400);
+  transform: translateX(0);
+  transition:
+    transform 250ms var(--ease-out),
+    width 250ms var(--ease-out);
+  will-change: transform, width;
+  pointer-events: none;
+}
+
+.filter-option {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--mist);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 250ms var(--ease-out);
+}
+
+.filter-option:hover {
+  color: var(--white);
+}
+
+.filter-option[aria-pressed="true"] {
+  color: var(--green-950);
+}
+
+.menu-group {
+  margin-top: 1.75rem;
+}
+
+.menu-group-title {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--green-700);
+  color: var(--gold-300);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.drink {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgb(210 166 70 / 0.1);
+}
+
+.drink-name {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.drink-leader {
+  flex: 1;
+  min-width: 1rem;
+  margin-left: 0.5rem;
+  border-bottom: 2px dotted var(--gold-700);
+  transform: translateY(-0.25em);
+}
+
+.drink-desc {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 0.1rem;
+  padding-right: 0.5rem;
+  color: var(--mist);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.drink-servings {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+}
+
+.drink-servings li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 0.6rem;
+  line-height: 1.35;
+}
+
+.drink-size {
+  color: var(--mist);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.drink-servings .price {
+  min-width: 4.25rem;
+  text-align: right;
+  color: var(--gold-400);
+  font-weight: 650;
+}
+
+/* =========================================================
+   Events
+   ========================================================= */
+.event-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.event-date {
+  display: grid;
+  justify-items: center;
+  padding: 0.45rem 0 0.5rem;
+  border-radius: 12px;
+  background: var(--green-800);
+  box-shadow: inset 0 0 0 1px var(--gold-600);
+  line-height: 1.1;
+}
+
+.event-weekday {
+  color: var(--mist);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.event-day {
+  margin: 0.15rem 0 0.1rem;
+  font-family: var(--font-sign);
+  font-size: 1.625rem;
+  color: var(--gold-400);
+  text-shadow: 0.05em 0.06em 0 var(--shade);
+}
+
+.event-month {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.event-body {
+  padding-top: 0.15rem;
+}
+
+.event-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--mist);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.event-badge {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--gold-400);
+  color: var(--green-950);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.event-title {
+  margin-top: 0.15rem;
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.event-desc {
+  margin-top: 0.15rem;
+  color: var(--mist);
+  font-size: 0.9375rem;
+}
+
+/* =========================================================
+   Opening hours
+   ========================================================= */
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours th,
+.hours td {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgb(210 166 70 / 0.12);
+  font-weight: 500;
+}
+
+.hours th {
+  text-align: left;
+}
+
+.hours td {
+  text-align: right;
+  color: var(--mist);
+  font-variant-numeric: tabular-nums;
+}
+
+.hours tr.is-today th,
+.hours tr.is-today td {
+  color: var(--gold-300);
+  font-weight: 700;
+}
+
+.hours-today {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--gold-400);
+  color: var(--green-950);
+  font-size: 0.75rem;
+  font-weight: 700;
+  vertical-align: 0.1em;
+}
+
+/* =========================================================
+   Visit: Instagram, address, footer
+   ========================================================= */
+.instagram-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 1.15rem;
+  border-radius: 14px;
+  background: var(--gold-500);
+  color: var(--green-950);
+  text-decoration: none;
+  box-shadow: 0 14px 30px -18px rgb(0 0 0 / 0.9);
+  transition:
+    background-color 150ms ease-out,
+    scale 150ms ease-out;
+}
+
+.instagram-link:hover {
+  background: var(--gold-400);
+}
+
+.instagram-link:active {
+  scale: 0.96;
+}
+
+.instagram-text {
+  display: grid;
+}
+
+.instagram-cta {
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.instagram-handle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.instagram-arrow {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.visit-address {
+  margin-top: 1.5rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.visit-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 2.75rem;
+  padding: 0 1.1rem 0 0.95rem;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--gold-600);
+  color: var(--gold-300);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease-out,
+    scale 150ms ease-out;
+}
+
+.visit-action:hover {
+  background: rgb(210 166 70 / 0.1);
+}
+
+.visit-action:active {
+  scale: 0.96;
+}
+
+.page-footer {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  margin-top: 3rem;
+  padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+  color: var(--mist);
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.footer-shamrock {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--gold-600);
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--gold-300);
+}
+
+.footer-example {
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--gold-700);
+  font-size: 0.8125rem;
+}

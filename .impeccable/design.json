@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T15:20:00+01:00",
+  "title": "Design System: Irish Pub Heilbronn – guest page",
+  "extensions": {
+    "colorMeta": {
+      "green-900": { "role": "neutral", "displayName": "Bottle Green (ground)" },
+      "green-800": { "role": "neutral", "displayName": "Board Green" },
+      "green-950": { "role": "neutral", "displayName": "Snug Green (bars, plaques)" },
+      "gold-400": { "role": "primary", "displayName": "Gold Leaf", "tonalRamp": ["#f2d68e", "#e4bd5f", "#d2a646", "#a37b2c", "#6f5520"] },
+      "green-lucky": { "role": "secondary", "displayName": "Clover Green" },
+      "mist": { "role": "neutral", "displayName": "Mist (secondary text)" }
+    },
+    "typographyMeta": {
+      "sign-name": { "displayName": "Sign", "purpose": "Pub name only." },
+      "section-heading": { "displayName": "Section sign", "purpose": "Section headings and event day numbers." }
+    },
+    "shadows": [
+      { "name": "board", "value": "0 18px 40px -20px rgb(0 0 0 / 0.7)", "purpose": "Masthead board lift." },
+      { "name": "pinstripe", "value": "inset 0 0 0 5px #103a29, inset 0 0 0 6px #a37b2c", "purpose": "Inner gold line of the double pinstripe (with a 2px gold border)." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "State transitions, 150–250ms." },
+      { "name": "sign-in", "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "One-time masthead reveal on load (opacity, 8px rise, 4px blur), staggered 80ms." }
+    ],
+    "breakpoints": [{ "name": "column", "value": "36rem" }]
+  },
+  "components": [
+    {
+      "name": "Category filter",
+      "kind": "custom",
+      "refersTo": "filter-option-selected",
+      "description": "Segmented control with a sliding gold pill.",
+      "html": "<div class=\"f-bar\"><span class=\"f-pill\"></span><button class=\"f-opt is-on\">Alle</button><button class=\"f-opt\">Bier</button><button class=\"f-opt\">Whiskey</button></div>",
+      "css": ".f-bar{position:relative;display:inline-flex;gap:2px;padding:4px;border-radius:999px;background:#061a11;box-shadow:inset 0 0 0 1px #6f5520;font-family:Figtree,system-ui,sans-serif}.f-pill{position:absolute;top:4px;left:4px;width:64px;height:40px;border-radius:999px;background:#e4bd5f}.f-opt{position:relative;height:40px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:#b5ccbe;font-weight:600;font-size:15px}.f-opt.is-on{color:#061a11}"
+    },
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single gold call to action (Instagram).",
+      "html": "<a class=\"b-pri\">Folge uns auf Instagram <span>↗</span></a>",
+      "css": ".b-pri{display:flex;justify-content:space-between;align-items:center;padding:16px 16px 16px 18px;border-radius:14px;background:#d2a646;color:#061a11;font:700 17px Figtree,system-ui,sans-serif;text-decoration:none}.b-pri:hover{background:#e4bd5f}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The painted pub sign",
+    "overview": "Gold-leaf signwriting on bottle green frames a calm, legible price list for guests reading in a dim pub.",
+    "keyCharacteristics": ["Dark bottle-green ground", "Signwritten gold small caps with a dark shade", "Double gold pinstripe", "Tariff rows with dotted leaders and tabular prices", "Four-leaf clover marks specials"],
+    "rules": [
+      { "name": "The gold-leaf rule", "body": "Gold is for signwriting, prices and selection, never paragraph text.", "section": "colors" },
+      { "name": "Signwriting is short", "body": "Holtwood One SC only for a few words.", "section": "typography" }
+    ],
+    "dos": ["Keep prices tabular and right-aligned", "Keep the world in the frame, the list plain"],
+    "donts": ["No photo-card grids", "No gradient text or glows", "No second display face"]
+  }
+}
