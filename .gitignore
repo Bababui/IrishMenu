@@ -28,3 +28,9 @@ dist-ssr
 
 # Personal notes for learning
 notes.md
+
+# Python
+.venv/
+__pycache__/
+*.db
+.env
