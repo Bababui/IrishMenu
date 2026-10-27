@@ -4,7 +4,7 @@ import type { UiText } from "../i18n";
 import type { Category, Lang, MenuGroup, MenuItem } from "../types";
 import CategoryFilter from "./CategoryFilter";
 import DrinkCard from "./DrinkCard";
-import { ChevronDown } from "./Icons";
+import { Cash, ChevronDown } from "./Icons";
 import SectionHeading from "./SectionHeading";
 
 type MenuProps = {
@@ -91,6 +91,12 @@ function Menu({ drinks, lang, t }: MenuProps) {
           );
         })}
       </div>
+
+      {/* Important before ordering, so it sits right under the menu. */}
+      <p className="cash-note">
+        <Cash className="cash-note-icon" />
+        {t.cashOnly}
+      </p>
     </section>
   );
 }
