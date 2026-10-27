@@ -891,6 +891,11 @@
   color: var(--gold-600);
 }
 
+.footer-cash {
+  color: var(--gold-300);
+  font-weight: 600;
+}
+
 .footer-links {
   display: flex;
   gap: 0.6rem;

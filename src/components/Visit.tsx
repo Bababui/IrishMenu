@@ -66,6 +66,7 @@ function Visit({ pub, t, showExampleNote }: VisitProps) {
         <span className="knot-band footer-knot" aria-hidden />
         <Shamrock className="footer-shamrock" />
         <p>{t.orderAtBar}</p>
+        <p className="footer-cash">{t.cashOnly}</p>
         <p className="footer-links">
           <a href={pub.legal.imprintUrl}>{t.imprint}</a>
           <span aria-hidden>·</span>

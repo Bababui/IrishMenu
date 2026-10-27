@@ -53,10 +53,7 @@ function StatusText({
   t: UiText;
 }) {
   if (status.open) {
-    const closes =
-      status.closesAt === "00:00"
-        ? t.midnight
-        : formatTime(status.closesAt, lang);
+    const closes = formatTime(status.closesAt, lang);
     return (
       <>
         <strong>{t.openNow}</strong> · {t.until} {closes}
