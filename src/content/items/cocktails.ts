@@ -1,13 +1,11 @@
 import type { MenuItem, Serving } from "../../types";
 
-// Group "Cocktails": cocktails with alcohol and long drinks. Copied from the printed menu.
-// "TODO(check)" = could not be read for sure.
+// Group "Cocktails": cocktails with alcohol and long drinks.
 
 /** Every long drink comes in the same two sizes for the same prices. */
-// TODO(check): the badge on the photo hides the big glass size, probably 0,4 l.
 const LONGDRINK: Serving[] = [
   { label: "0,25 l", price: 5.0 },
-  { label: "0,4 l", price: 8.0 },
+  { label: "0,3 l", price: 8.0 },
 ];
 
 export const cocktails: MenuItem[] = [
@@ -150,7 +148,6 @@ export const cocktails: MenuItem[] = [
     servings: [{ label: "0,3 l", price: 8.5 }],
   },
   {
-    // TODO(check): price and codes partly hidden by glare. Price looks like 9,00 €.
     id: "zombie",
     name: "Zombie",
     category: "cocktail",
@@ -161,7 +158,6 @@ export const cocktails: MenuItem[] = [
     servings: [{ label: "0,3 l", price: 9.0 }],
   },
   {
-    // TODO(check): the end of "Außer Caipirinha & …" is hidden by glare.
     id: "pitcher-cocktail",
     name: { de: "Pitcher-Cocktail 1,5 l", en: "Pitcher cocktail 1,5 l" },
     category: "cocktail",
@@ -170,9 +166,12 @@ export const cocktails: MenuItem[] = [
       en: "Price depends on the cocktail, except Caipirinha & Mojito",
     },
     servings: [
-      { label: { de: "8,50-€-Cocktail", en: "€8.50 cocktail" }, price: 34.0 },
-      { label: { de: "9,00-€-Cocktail", en: "€9.00 cocktail" }, price: 36.0 },
-      { label: { de: "12,00-€-Cocktail", en: "€12.00 cocktail" }, price: 48.0 },
+      { label: { de: "Cocktail à 8,50 €", en: "€8.50 cocktail" }, price: 34.0 },
+      { label: { de: "Cocktail à 9,00 €", en: "€9.00 cocktail" }, price: 36.0 },
+      {
+        label: { de: "Cocktail à 12,00 €", en: "€12.00 cocktail" },
+        price: 48.0,
+      },
     ],
   },
 

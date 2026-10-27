@@ -1,11 +1,10 @@
 import type { MenuItem, Serving } from "../../types";
 
 // Group "Alkoholfrei": soft drinks, juices and alcohol-free cocktails.
-// Copied from the printed menu. "TODO(check)" = could not be read for sure.
 
 const BOTTLE_033 = { de: "Flasche 0,33 l", en: "Bottle 0,33 l" };
 
-/** Small and large glass, the way most soft drinks are listed. */
+/** For Small and large glasses. */
 function glasses(price02: number, price04: number): Serving[] {
   return [
     { label: "0,2 l", price: price02 },
@@ -108,7 +107,6 @@ export const soft: MenuItem[] = [
     ],
   },
   {
-    // TODO(check): codes partly hidden, "6, 8" readable, maybe one more.
     id: "bundaberg",
     name: "Bundaberg Ginger Brew",
     category: "soft",

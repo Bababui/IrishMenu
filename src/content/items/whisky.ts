@@ -1,7 +1,6 @@
 import type { Localized, MenuItem, Serving } from "../../types";
 
-// Group "Whisky": whiskies by region and whisky mixes. Copied from the printed menu.
-// "TODO(check)" = could not be read for sure.
+// Group "Whisky": whiskies by region and whisky mixes.
 
 /** Age line under the name, e.g. years(12) -> { de: "12 Jahre", en: "12 years" }. */
 function years(n: number): Localized {
@@ -130,25 +129,22 @@ export const whisky: MenuItem[] = [
     servings: shots(4.1, 7.7),
   },
   {
-    // TODO(check): 4 cl price unreadable on the photo, add it back as shots(4.4, ?)
     id: "dimple",
     name: "Dimple de Luxe",
     category: "scotch",
-    servings: [{ label: "2 cl", price: 4.4 }],
+    servings: shots(4.4, 7.3),
   },
   {
-    // TODO(check): 4 cl price unreadable on the photo, add it back as shots(3.9, ?)
     id: "glenfiddich",
     name: "Glenfiddich",
     category: "scotch",
-    servings: [{ label: "2 cl", price: 3.9 }],
+    servings: shots(3.9, 6.4),
   },
   {
-    // TODO(check): 4 cl price unreadable on the photo, add it back as shots(3.9, ?)
     id: "johnnie-walker-red",
     name: "Johnnie Walker Red Label",
     category: "scotch",
-    servings: [{ label: "2 cl", price: 3.9 }],
+    servings: shots(3.9, 6.4),
   },
   {
     id: "johnnie-walker-black",

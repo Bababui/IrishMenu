@@ -1,7 +1,6 @@
 import type { MenuItem } from "../../types";
 
-// Group "Shots": shots (2 cl) and shooters. Copied from the printed menu.
-// "TODO(check)" = could not be read for sure.
+// Group "Shots": shots (2 cl) and shooters.
 
 export const shots: MenuItem[] = [
   // --- Shots ---
@@ -90,14 +89,12 @@ export const shots: MenuItem[] = [
     servings: [{ label: "2 cl", price: 3.3 }],
   },
   {
-    // TODO(check): name hidden by glare on the photo, probably plain "Wodka".
     id: "wodka",
     name: { de: "Wodka", en: "Vodka" },
     category: "shot",
     servings: [{ label: "2 cl", price: 3.3 }],
   },
   {
-    // TODO(check): code partly hidden by glare, looks like 3.
     id: "wodka-waldmeister",
     name: { de: "Wodka-Waldmeister", en: "Vodka woodruff" },
     category: "shot",
@@ -105,7 +102,6 @@ export const shots: MenuItem[] = [
     servings: [{ label: "2 cl", price: 2.8 }],
   },
   {
-    // TODO(check): 4 cl price half hidden by glare, looks like 6,90 €.
     id: "baileys-on-ice",
     name: { de: "Bailey's auf Eis", en: "Bailey's on ice" },
     category: "shot",

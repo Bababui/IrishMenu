@@ -3,6 +3,7 @@ import { CATEGORIES, GROUPS } from "../content/menu";
 import type { UiText } from "../i18n";
 import type { Lang, MenuGroup, MenuItem } from "../types";
 import CategoryFilter from "./CategoryFilter";
+import CodeLegend from "./CodeLegend";
 import DrinkCard from "./DrinkCard";
 import SectionHeading from "./SectionHeading";
 
@@ -50,6 +51,8 @@ function Menu({ drinks, lang, t }: MenuProps) {
           </div>
         ))}
       </div>
+
+      <CodeLegend lang={lang} t={t} />
     </section>
   );
 }

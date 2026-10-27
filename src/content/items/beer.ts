@@ -2,7 +2,6 @@ import type { MenuItem } from "../../types";
 
 // Group "Bier": draught, bottled, beer mixes, Irish beer mixes,
 // and the big sizes (Maß, pitcher, 3-litre tower).
-// Copied from the printed menu. "TODO(check)" = could not be read for sure.
 
 const STEIN = { de: "Maß 1 l", en: "Stein 1 l" };
 const PITCHER = "Pitcher 1,5 l";
@@ -70,7 +69,6 @@ export const beer: MenuItem[] = [
     ],
   },
   {
-    // TODO(check): the paper shows 0,2 l and 0,5 l for Kölsch. Is 0,5 l right?
     id: "koelsch",
     name: "Kölsch",
     category: "draught",

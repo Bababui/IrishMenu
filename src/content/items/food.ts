@@ -1,7 +1,6 @@
 import type { MenuItem, Serving } from "../../types";
 
 // Group "Essen": pub grub, pizza, Flammkuchen, baguettes & toasts, salad.
-// Copied from the printed menu. "TODO(check)" = could not be read for sure.
 
 /** Toasts come as a normal one or a "Double Up!" with twice the filling. */
 function toast(normal: number, doubleUp: number): Serving[] {
@@ -11,13 +10,82 @@ function toast(normal: number, doubleUp: number): Serving[] {
   ];
 }
 
-// TODO(check) for all pizzas: on the paper menu Margherita has no price and
-// Speziale has two (9,50 and 11,00), so the price column looks shifted by one line.
-// The prices below assume that shift. Ask the boss before launch.
+const WITH_FRIES = { de: "mit Pommes / Twisters", en: "with fries / twisters" };
+const KETCHUP_MAYO = { de: "Mit Ketchup / Mayo", en: "With ketchup / mayo" };
 
 export const food: MenuItem[] = [
   // --- Pub Grub ---
-  // 👉 YOUR EXERCISE: add the Pub Grub items here (category "pub-grub").
+  {
+    id: "pub-burger",
+    name: "Pub Burger",
+    category: "pub-grub",
+    description: {
+      de: "Saftiges Rindfleisch, Käse, Salat, Tomaten, Zwiebeln, Gurke, Sauce",
+      en: "Juicy beef, cheese, lettuce, tomatoes, onions, pickles, sauce",
+    },
+    codes: ["3", "6", "A", "B", "E", "F", "H", "I"],
+    servings: [{ price: 7.9 }, { label: WITH_FRIES, price: 10.9 }],
+  },
+  {
+    id: "chicken-burger",
+    name: "Chicken Burger",
+    category: "pub-grub",
+    description: {
+      de: "Hühnchenfleisch, Salat, Tomaten, Zwiebeln, Gurke, Sauce",
+      en: "Chicken, lettuce, tomatoes, onions, pickles, sauce",
+    },
+    codes: ["A", "B", "D", "E", "F", "G"],
+    servings: [{ price: 9.9 }, { label: WITH_FRIES, price: 12.9 }],
+  },
+  {
+    id: "chicken-nuggets",
+    name: "Chicken Nuggets",
+    category: "pub-grub",
+    servings: [{ price: 7.9 }, { label: WITH_FRIES, price: 10.9 }],
+  },
+  {
+    id: "fish-chips",
+    name: "Fish & Chips",
+    category: "pub-grub",
+    servings: [{ price: 13.4 }],
+  },
+  {
+    id: "pommes",
+    name: "Pommes",
+    category: "pub-grub",
+    description: KETCHUP_MAYO,
+    servings: [{ price: 6.5 }],
+  },
+  {
+    id: "twisters",
+    name: "Twisters",
+    category: "pub-grub",
+    description: KETCHUP_MAYO,
+    servings: [{ price: 6.5 }],
+  },
+  {
+    id: "chips",
+    name: { de: "Chips", en: "Crisps" },
+    category: "pub-grub",
+    description: {
+      de: "Paprika oder Salt 'n' Vinegar",
+      en: "Paprika or salt 'n' vinegar",
+    },
+    servings: [{ price: 2.0 }],
+  },
+  {
+    id: "irish-stew",
+    name: { de: "Irish Stew", en: "Irish Stew" },
+    category: "pub-grub",
+    description: {
+      de: "Nur am letzten Freitag & Samstag des Monats",
+      en: "Only on the last Friday & Saturday of the month",
+    },
+    servings: [
+      { label: { de: "Klein", en: "Small" }, price: 9.9 },
+      { label: { de: "Groß", en: "Large" }, price: 14.9 },
+    ],
+  },
 
   // --- Pizza ---
   {
@@ -134,7 +202,6 @@ export const food: MenuItem[] = [
 
   // --- Baguettes & Toasts ---
   {
-    // TODO(check): name and codes partly hidden by glare ("…se-Toast 3,5").
     id: "kaese-toast",
     name: { de: "Käse-Toast", en: "Cheese toast" },
     category: "toast",

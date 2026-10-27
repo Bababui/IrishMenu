@@ -12,7 +12,15 @@ function DrinkCard({ drink, lang }: DrinkCardProps) {
   return (
     <li className="drink">
       <p className="drink-name">
-        <span>{localize(drink.name, lang)}</span>
+        <span>
+          {localize(drink.name, lang)}
+          {drink.codes && (
+            <>
+              {" "}
+              <sup className="drink-codes">{drink.codes.join(", ")}</sup>
+            </>
+          )}
+        </span>
         <span className="drink-leader" aria-hidden />
       </p>
       {drink.description && (
