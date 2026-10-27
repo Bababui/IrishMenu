@@ -96,6 +96,21 @@ export function ArrowUpRight({ className }: IconProps) {
   );
 }
 
+/** Small "v" arrow for fold-out headings. Rotate it with CSS when open. */
+export function ChevronDown({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      aria-hidden
+    >
+      <path d="m6 9 6 6 6-6" {...stroke} />
+    </svg>
+  );
+}
+
 export function MapPin({ className }: IconProps) {
   return (
     <svg
