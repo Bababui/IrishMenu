@@ -1,10 +1,10 @@
-import { formatPrice } from "../lib/format";
-import type { Drink, Lang } from "../types";
+import { formatPrice, localize } from "../lib/format";
+import type { MenuItem, Lang } from "../types";
 
-// One drink on the menu, set like a printed price list:
-// name, dotted line, then size and price for each serving.
+// One item on the menu, set like a printed price list:
+// name, dotted line, then label (size) and price for each serving.
 type DrinkCardProps = {
-  drink: Drink;
+  drink: MenuItem;
   lang: Lang;
 };
 
@@ -12,7 +12,7 @@ function DrinkCard({ drink, lang }: DrinkCardProps) {
   return (
     <li className="drink">
       <p className="drink-name">
-        <span>{drink.name}</span>
+        <span>{localize(drink.name, lang)}</span>
         <span className="drink-leader" aria-hidden />
       </p>
       {drink.description && (
@@ -21,7 +21,11 @@ function DrinkCard({ drink, lang }: DrinkCardProps) {
       <ul className="drink-servings">
         {drink.servings.map((serving, i) => (
           <li key={i}>
-            {serving.size && <span className="drink-size">{serving.size}</span>}
+            {serving.label && (
+              <span className="drink-size">
+                {localize(serving.label, lang)}
+              </span>
+            )}
             <span className="price">{formatPrice(serving.price, lang)}</span>
           </li>
         ))}

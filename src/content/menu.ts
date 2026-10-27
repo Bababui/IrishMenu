@@ -1,144 +1,147 @@
-import type { Category, Drink, Localized } from "../types";
+import type { Category, Localized, MenuGroup, MenuItem } from "../types";
+import { beer } from "./items/beer";
+import { cider } from "./items/cider";
+import { cocktails } from "./items/cocktails";
+import { food } from "./items/food";
+import { hot } from "./items/hot";
+import { shots } from "./items/shots";
+import { soft } from "./items/soft";
+import { whisky } from "./items/whisky";
+import { wine } from "./items/wine";
 
-/** Category order and labels for the filter buttons and headings. */
-export const CATEGORIES: { id: Category; label: Localized }[] = [
+/** Group order and labels for the buttons. The big names on the real menu */
+export const GROUPS: { id: MenuGroup; label: Localized }[] = [
   { id: "beer", label: { de: "Bier", en: "Beer" } },
   { id: "cider", label: { de: "Cider", en: "Cider" } },
-  { id: "whiskey", label: { de: "Whiskey", en: "Whiskey" } },
-  { id: "longdrink", label: { de: "Longdrinks", en: "Long drinks" } },
-  { id: "cocktail", label: { de: "Cocktails", en: "Cocktails" } },
+  { id: "whisky", label: { de: "Whisky", en: "Whisky" } },
+  { id: "cocktails", label: { de: "Cocktails", en: "Cocktails" } },
+  { id: "shots", label: { de: "Shots", en: "Shots" } },
+  { id: "wine", label: { de: "Wein", en: "Wine" } },
   { id: "soft", label: { de: "Alkoholfrei", en: "Soft drinks" } },
   { id: "hot", label: { de: "Heißgetränke", en: "Hot drinks" } },
+  { id: "food", label: { de: "Essen", en: "Food" } },
 ];
 
-// ⚠️ EXAMPLE CONTENT: replace with the pub's real menu and prices before launch.
-export const drinks: Drink[] = [
+/** Category order, headings, and which group button each one sits under. */
+export const CATEGORIES: {
+  id: Category;
+  group: MenuGroup;
+  label: Localized;
+}[] = [
   {
-    id: "guinness",
-    name: "Guinness",
-    category: "beer",
-    description: { de: "Irish Stout vom Fass", en: "Irish stout on draught" },
-    servings: [
-      { size: "0,3 l", price: 4.2 },
-      { size: "0,5 l", price: 6.5 },
-    ],
+    id: "draught",
+    group: "beer",
+    label: { de: "Bier vom Fass", en: "Draught beer" },
   },
   {
-    id: "kilkenny",
-    name: "Kilkenny",
-    category: "beer",
-    description: {
-      de: "Irish Red Ale vom Fass",
-      en: "Irish red ale on draught",
-    },
-    servings: [
-      { size: "0,3 l", price: 4.0 },
-      { size: "0,5 l", price: 6.2 },
-    ],
+    id: "bottled",
+    group: "beer",
+    label: { de: "Flaschenbiere", en: "Bottled beer" },
   },
   {
-    id: "harp",
-    name: "Harp Lager",
-    category: "beer",
-    servings: [
-      { size: "0,3 l", price: 3.8 },
-      { size: "0,5 l", price: 5.6 },
-    ],
+    id: "beer-mix",
+    group: "beer",
+    label: { de: "Bier-Mix", en: "Beer mixes" },
   },
   {
-    id: "export",
-    name: "Export",
-    category: "beer",
-    description: { de: "Aus der Region", en: "Local brew" },
-    servings: [{ size: "0,5 l", price: 4.6 }],
+    id: "irish-beer-mix",
+    group: "beer",
+    label: { de: "Irish Bier-Mix", en: "Irish beer mixes" },
   },
   {
-    id: "magners",
-    name: "Magners Original",
-    category: "cider",
-    servings: [{ size: "0,568 l", price: 6.4 }],
+    id: "pitcher",
+    group: "beer",
+    label: { de: "Maß, Pitcher & Säulen", en: "Steins, pitchers & towers" },
+  },
+  { id: "cider", group: "cider", label: { de: "Cider", en: "Cider" } },
+  {
+    id: "cider-mix",
+    group: "cider",
+    label: { de: "Cider-Mix", en: "Cider mixes" },
+  },
+  { id: "whisky", group: "whisky", label: { de: "Whiskys", en: "Whiskies" } },
+  {
+    id: "single-malt",
+    group: "whisky",
+    label: { de: "Single Malt Whiskys", en: "Single malt whiskies" },
   },
   {
-    id: "jameson",
-    name: "Jameson",
-    category: "whiskey",
-    description: { de: "Irish Whiskey, Blend", en: "Irish whiskey, blend" },
-    servings: [{ size: "4 cl", price: 6.0 }],
+    id: "scotch",
+    group: "whisky",
+    label: { de: "Scotch Whiskys", en: "Scotch whiskies" },
   },
   {
-    id: "redbreast",
-    name: "Redbreast 12",
-    category: "whiskey",
-    description: { de: "Single Pot Still", en: "Single pot still" },
-    servings: [{ size: "4 cl", price: 9.5 }],
+    id: "irish-whiskey",
+    group: "whisky",
+    label: { de: "Irish Whiskeys", en: "Irish whiskeys" },
   },
   {
-    id: "teeling",
-    name: "Teeling Small Batch",
-    category: "whiskey",
-    servings: [{ size: "4 cl", price: 7.5 }],
+    id: "whisky-mix",
+    group: "whisky",
+    label: { de: "Whisky-Mix", en: "Whisky mixes" },
   },
   {
-    id: "gin-tonic",
-    name: "Gin Tonic",
-    category: "longdrink",
-    servings: [{ size: "4 cl", price: 8.5 }],
+    id: "cocktail",
+    group: "cocktails",
+    label: { de: "Cocktails", en: "Cocktails" },
   },
   {
-    id: "whiskey-cola",
-    name: "Whiskey Cola",
-    category: "longdrink",
-    servings: [{ size: "4 cl", price: 8.0 }],
+    id: "longdrink",
+    group: "cocktails",
+    label: { de: "Longdrinks", en: "Long drinks" },
+  },
+  { id: "shot", group: "shots", label: { de: "Shots", en: "Shots" } },
+  { id: "shooter", group: "shots", label: { de: "Shooters", en: "Shooters" } },
+  {
+    id: "wine",
+    group: "wine",
+    label: { de: "Deutsche Qualitätsweine", en: "German quality wines" },
   },
   {
-    id: "irish-mule",
-    name: "Irish Mule",
-    category: "cocktail",
-    description: {
-      de: "Irish Whiskey, Ginger Beer, Limette",
-      en: "Irish whiskey, ginger beer, lime",
-    },
-    servings: [{ price: 9.5 }],
+    id: "sparkling",
+    group: "wine",
+    label: { de: "Schaum- & Perlweine", en: "Sparkling wine" },
   },
   {
-    id: "mojito",
-    name: "Mojito",
-    category: "cocktail",
-    servings: [{ price: 9.0 }],
+    id: "soft",
+    group: "soft",
+    label: { de: "Alkoholfreie Getränke", en: "Soft drinks" },
+  },
+  { id: "juice", group: "soft", label: { de: "Säfte", en: "Juices" } },
+  {
+    id: "mocktail",
+    group: "soft",
+    label: { de: "Alkoholfreie Cocktails", en: "Alcohol-free cocktails" },
+  },
+  { id: "hot", group: "hot", label: { de: "Heißgetränke", en: "Hot drinks" } },
+  { id: "pub-grub", group: "food", label: { de: "Pub Grub", en: "Pub grub" } },
+  { id: "pizza", group: "food", label: { de: "Pizza", en: "Pizza" } },
+  {
+    id: "flammkuchen",
+    group: "food",
+    label: { de: "Flammkuchen", en: "Tarte flambée" },
   },
   {
-    id: "cola",
-    name: "Cola",
-    category: "soft",
-    servings: [{ size: "0,4 l", price: 3.9 }],
+    id: "toast",
+    group: "food",
+    label: { de: "Baguettes & Toasts", en: "Baguettes & toasts" },
   },
-  {
-    id: "apfelschorle",
-    name: "Apfelschorle",
-    category: "soft",
-    servings: [{ size: "0,4 l", price: 3.8 }],
-  },
-  {
-    id: "guinness-00",
-    name: "Guinness 0.0",
-    category: "soft",
-    description: { de: "Alkoholfrei", en: "Alcohol-free" },
-    servings: [{ size: "0,44 l", price: 4.9 }],
-  },
-  {
-    id: "irish-coffee",
-    name: "Irish Coffee",
-    category: "hot",
-    description: {
-      de: "Kaffee, Irish Whiskey, Sahne",
-      en: "Coffee, Irish whiskey, cream",
-    },
-    servings: [{ price: 7.5 }],
-  },
-  {
-    id: "tea",
-    name: "Tee",
-    category: "hot",
-    servings: [{ price: 2.8 }],
-  },
+  { id: "salad", group: "food", label: { de: "Salate", en: "Salads" } },
+];
+
+/**
+ * Everything on the menu, food and drinks.
+ * Each file in ./items holds one group; the order inside a heading
+ * is the order in that file.
+ */
+export const drinks: MenuItem[] = [
+  ...beer,
+  ...cider,
+  ...whisky,
+  ...cocktails,
+  ...shots,
+  ...wine,
+  ...soft,
+  ...hot,
+  ...food,
 ];

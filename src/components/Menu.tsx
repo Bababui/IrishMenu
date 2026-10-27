@@ -1,42 +1,35 @@
 import { useState } from "react";
-import { CATEGORIES } from "../content/menu";
+import { CATEGORIES, GROUPS } from "../content/menu";
 import type { UiText } from "../i18n";
-import type { Category, Drink, Lang } from "../types";
+import type { Lang, MenuGroup, MenuItem } from "../types";
 import CategoryFilter from "./CategoryFilter";
 import DrinkCard from "./DrinkCard";
 import SectionHeading from "./SectionHeading";
 
 type MenuProps = {
-  drinks: Drink[];
+  drinks: MenuItem[];
   lang: Lang;
   t: UiText;
 };
 
-type Selection = Category | "all";
-
 function Menu({ drinks, lang, t }: MenuProps) {
-  // State: which category the guest picked. Everything else is calculated from it.
-  const [selected, setSelected] = useState<Selection>("all");
+  // State: which group button the guest picked. The menu opens on beer.
+  const [selected, setSelected] = useState<MenuGroup>("beer");
 
-  // Only categories that actually have drinks get a button and a heading.
+  // Only categories that have items, and only groups that have such categories.
   const categories = CATEGORIES.filter((c) =>
     drinks.some((d) => d.category === c.id),
   );
-  const visible =
-    selected === "all"
-      ? categories
-      : categories.filter((c) => c.id === selected);
+  const groups = GROUPS.filter((g) => categories.some((c) => c.group === g.id));
+  const visible = categories.filter((c) => c.group === selected);
 
-  const options = [
-    { id: "all" as const, label: t.all },
-    ...categories.map((c) => ({ id: c.id, label: c.label[lang] })),
-  ];
+  const options = groups.map((g) => ({ id: g.id, label: g.label[lang] }));
 
   return (
     <section id="karte" className="section" aria-labelledby="karte-title">
       <SectionHeading id="karte-title">{t.menuTitle}</SectionHeading>
 
-      <CategoryFilter<Selection>
+      <CategoryFilter<MenuGroup>
         options={options}
         selected={selected}
         onSelect={setSelected}

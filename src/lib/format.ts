@@ -1,6 +1,11 @@
-import type { Lang } from "../types";
+import type { Lang, Translatable } from "../types";
 
 const LOCALE: Record<Lang, string> = { de: "de-DE", en: "en-IE" };
+
+/** Picks the right language: "Guinness" stays "Guinness", { de, en } gives de or en. */
+export function localize(text: Translatable, lang: Lang): string {
+  return typeof text === "string" ? text : text[lang];
+}
 
 /** 6.5 -> "6,50 €" (German) or "€6.50" (English) */
 export function formatPrice(value: number, lang: Lang): string {

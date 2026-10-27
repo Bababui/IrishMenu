@@ -4,9 +4,7 @@ import type { PubInfo } from "../types";
 export const USES_EXAMPLE_CONTENT = true;
 
 // Real: name, town, Instagram.
-// ⚠️ STILL EXAMPLE: tagline, address, maps link, phone, opening hours, legal links.
 export const pub: PubInfo = {
-  // The sign shows "IRISH PUB" with "HEILBRONN" underneath = Irish Pub Heilbronn.
   name: "Irish Pub",
   town: "Heilbronn",
   tagline: {
