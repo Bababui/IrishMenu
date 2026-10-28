@@ -1,7 +1,6 @@
 import type { MenuItem, Serving } from "../../types";
 
-// Group "Alkoholfrei": soft drinks, juices and alcohol-free cocktails.
-
+// Group "Alkoholfrei"
 const BOTTLE_033 = { de: "Flasche 0,33 l", en: "Bottle 0,33 l" };
 
 /** For Small and large glasses. */

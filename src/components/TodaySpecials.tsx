@@ -24,7 +24,9 @@ function TodaySpecials({ offers, day, lang, t }: TodaySpecialsProps) {
         <span className="leprechaun-peek" aria-hidden>
           <Leprechaun className="leprechaun" />
         </span>
-        <p className="specials-date">{longDate(day, lang)}</p>
+        <p className="specials-date">
+          {t.today} · {longDate(day, lang)}
+        </p>
 
         {offers.length === 0 ? (
           <p className="specials-empty">{t.noOffers}</p>
