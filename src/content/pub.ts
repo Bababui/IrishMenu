@@ -1,33 +1,31 @@
 import type { PubInfo } from "../types";
 
 /** Shows a small "example content" note in the footer. Set to false once the real content is in. */
-export const USES_EXAMPLE_CONTENT = true;
+export const USES_EXAMPLE_CONTENT = false;
 
-// Real: name, town, Instagram.
-// ⚠️ STILL EXAMPLE: tagline, address, maps link, phone, opening hours, legal links.
 export const pub: PubInfo = {
-  // The sign shows "IRISH PUB" with "HEILBRONN" underneath = Irish Pub Heilbronn.
   name: "Irish Pub",
   town: "Heilbronn",
   tagline: {
     de: "Guinness, Whiskey, Live-Musik & Fußball",
     en: "Guinness, whiskey, live music & football",
   },
-  address: { street: "Musterstraße 1", city: "74072 Heilbronn" },
+  address: { street: "Lammgasse 30", city: "74072 Heilbronn" },
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Musterstra%C3%9Fe+1+74072+Heilbronn",
-  phone: "07131 000000",
+    "https://www.google.com/maps/search/?api=1&query=Irish+Pub+Lammgasse+30+74072+Heilbronn",
+  phone: "07131 8736336",
   instagram: "irishpub_heilbronn",
   // Index 0 = Sunday, 1 = Monday ... 6 = Saturday. `null` = closed.
   hours: [
-    { open: "15:00", close: "23:00" }, // Sunday
-    null, // Monday
-    { open: "17:00", close: "00:00" }, // Tuesday
-    { open: "17:00", close: "00:00" }, // Wednesday
-    { open: "17:00", close: "01:00" }, // Thursday
-    { open: "16:00", close: "02:00" }, // Friday
-    { open: "14:00", close: "02:00" }, // Saturday
+    null, // Sunday: closed
+    { open: "18:00", close: "00:00" }, // Monday
+    { open: "18:00", close: "00:00" }, // Tuesday
+    { open: "18:00", close: "00:00" }, // Wednesday
+    { open: "18:00", close: "00:00" }, // Thursday
+    { open: "18:00", close: "02:00" }, // Friday
+    { open: "18:00", close: "02:00" }, // Saturday
   ],
+  // TODO: Impressum & Datenschutz pages are still missing (legally needed before launch).
   legal: {
     imprintUrl: "#impressum",
     privacyUrl: "#datenschutz",

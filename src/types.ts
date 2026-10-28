@@ -8,23 +8,99 @@ export type Lang = "de" | "en";
 /** A text in both languages, e.g. { de: "Bier", en: "Beer" }. */
 export type Localized = Record<Lang, string>;
 
-/** Menu categories. Add a new one here AND in CATEGORIES (src/content/menu.ts). */
-export type Category =
-  "beer" | "cider" | "whiskey" | "longdrink" | "cocktail" | "soft" | "hot";
+/** The buttons at the top of the menu. Add a new one here AND in GROUPS (src/content/menu.ts). */
+export type MenuGroup =
+  | "beer"
+  | "cider"
+  | "whisky"
+  | "cocktails"
+  | "shots"
+  | "wine"
+  | "soft"
+  | "hot"
+  | "food";
 
-/** One size + price, e.g. { size: "0,5 l", price: 6.5 }. */
+/** The headings on the menu. Add a new one here AND in CATEGORIES (src/content/menu.ts). */
+export type Category =
+  // beer
+  | "draught"
+  | "bottled"
+  | "beer-mix"
+  | "irish-beer-mix"
+  | "pitcher"
+  // cider
+  | "cider"
+  | "cider-mix"
+  // whisky
+  | "whisky"
+  | "single-malt"
+  | "scotch"
+  | "irish-whiskey"
+  | "whisky-mix"
+  // cocktails
+  | "cocktail"
+  | "longdrink"
+  // shots
+  | "shot"
+  | "shooter"
+  // wine
+  | "wine"
+  | "sparkling"
+  // soft
+  | "soft"
+  | "juice"
+  | "mocktail"
+  // hot
+  | "hot"
+  // food
+  | "pub-grub"
+  | "pizza"
+  | "flammkuchen"
+  | "toast"
+  | "salad";
+
+/**
+ * A text that is either the same in both languages ("Guinness", "0,5 l")
+ * or different per language ({ de: "Apfelsaft", en: "Apple juice" }).
+ */
+export type Translatable = string | Localized;
+
+/** One price on the menu: "0,5 l", "4 cl", { de: "Klein", en: "Small" } … */
 export type Serving = {
-  size?: string;
+  label?: Translatable;
   price: number;
 };
 
-export type Drink = {
+/** Codes from the paper menu's legend: numbers = additives, letters = allergens. */
+export type Code =
+  | "1"
+  | "2"
+  | "3"
+  | "4"
+  | "5"
+  | "6"
+  | "7"
+  | "8"
+  | "9"
+  | "A"
+  | "B"
+  | "C"
+  | "D"
+  | "E"
+  | "F"
+  | "G"
+  | "H"
+  | "I";
+
+/** Anything on the menu, food or drink. */
+export type MenuItem = {
   id: string;
-  name: string;
+  name: Translatable;
   category: Category;
   /** Optional short line under the name. */
   description?: Localized;
-  /** One or more sizes. Most drinks have one, draught beer often two. */
+  /** Allergen and additive codes, e.g. ["3", "A"]. */
+  codes?: Code[];
   servings: Serving[];
 };
 

@@ -9,17 +9,15 @@ export const ui = {
     navMenu: "Karte",
     navEvents: "Events",
     navHours: "Zeiten",
-    todayTitle: "Heute",
+    todayTitle: "Angebote",
     menuTitle: "Karte",
     eventsTitle: "Events",
     hoursTitle: "Öffnungszeiten",
     visitTitle: "Besuch uns",
-    all: "Alle",
     filterLabel: "Kategorie wählen",
     openNow: "Jetzt geöffnet",
     closedNow: "Geschlossen",
     until: "bis",
-    midnight: "Mitternacht",
     opensToday: "öffnet heute um",
     opensTomorrow: "öffnet morgen um",
     opensOn: "öffnet",
@@ -36,6 +34,7 @@ export const ui = {
     directions: "Route planen",
     call: "Anrufen",
     orderAtBar: "Bestellt und bezahlt wird an der Bar.",
+    cashOnly: "Nur Barzahlung, keine Kartenzahlung möglich.",
     imprint: "Impressum",
     privacy: "Datenschutz",
     langLabel: "Sprache",
@@ -46,17 +45,15 @@ export const ui = {
     navMenu: "Menu",
     navEvents: "Events",
     navHours: "Hours",
-    todayTitle: "Today",
+    todayTitle: "Specials",
     menuTitle: "Menu",
     eventsTitle: "Events",
     hoursTitle: "Opening hours",
     visitTitle: "Visit us",
-    all: "All",
     filterLabel: "Choose a category",
     openNow: "Open now",
     closedNow: "Closed",
     until: "until",
-    midnight: "midnight",
     opensToday: "opens today at",
     opensTomorrow: "opens tomorrow at",
     opensOn: "opens",
@@ -71,6 +68,7 @@ export const ui = {
     directions: "Get directions",
     call: "Call us",
     orderAtBar: "Order and pay at the bar.",
+    cashOnly: "Cash only, we can't take cards.",
     imprint: "Legal notice",
     privacy: "Privacy",
     langLabel: "Language",
@@ -87,9 +85,10 @@ function initialLang(): Lang {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "de" || saved === "en") return saved;
   } catch {
-    // Storage can be blocked (private mode). Fall through to the browser language.
+    // Storage can be blocked (private mode). Then just start in German.
   }
-  return navigator.language.toLowerCase().startsWith("de") ? "de" : "en";
+  // First visit: always German. Guests switch to English with the DE | EN toggle.
+  return "de";
 }
 
 /** Current language + a setter. Remembers the choice and updates <html lang>. */
