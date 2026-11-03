@@ -1,0 +1,4515 @@
+{
+  "categories": [
+    {
+      "id": "draught",
+      "group": "beer",
+      "label": {
+        "de": "Bier vom Fass",
+        "en": "Draught beer"
+      }
+    },
+    {
+      "id": "bottled",
+      "group": "beer",
+      "label": {
+        "de": "Flaschenbiere",
+        "en": "Bottled beer"
+      }
+    },
+    {
+      "id": "beer-mix",
+      "group": "beer",
+      "label": {
+        "de": "Bier-Mix",
+        "en": "Beer mixes"
+      }
+    },
+    {
+      "id": "irish-beer-mix",
+      "group": "beer",
+      "label": {
+        "de": "Irish Bier-Mix",
+        "en": "Irish beer mixes"
+      }
+    },
+    {
+      "id": "pitcher",
+      "group": "beer",
+      "label": {
+        "de": "Maß, Pitcher & Säulen",
+        "en": "Steins, pitchers & towers"
+      }
+    },
+    {
+      "id": "cider",
+      "group": "cider",
+      "label": {
+        "de": "Cider",
+        "en": "Cider"
+      }
+    },
+    {
+      "id": "cider-mix",
+      "group": "cider",
+      "label": {
+        "de": "Cider-Mix",
+        "en": "Cider mixes"
+      }
+    },
+    {
+      "id": "whisky",
+      "group": "whisky",
+      "label": {
+        "de": "Whiskys",
+        "en": "Whiskies"
+      }
+    },
+    {
+      "id": "single-malt",
+      "group": "whisky",
+      "label": {
+        "de": "Single Malt Whiskys",
+        "en": "Single malt whiskies"
+      }
+    },
+    {
+      "id": "scotch",
+      "group": "whisky",
+      "label": {
+        "de": "Scotch Whiskys",
+        "en": "Scotch whiskies"
+      }
+    },
+    {
+      "id": "irish-whiskey",
+      "group": "whisky",
+      "label": {
+        "de": "Irish Whiskeys",
+        "en": "Irish whiskeys"
+      }
+    },
+    {
+      "id": "whisky-mix",
+      "group": "whisky",
+      "label": {
+        "de": "Whisky-Mix",
+        "en": "Whisky mixes"
+      }
+    },
+    {
+      "id": "cocktail",
+      "group": "cocktails",
+      "label": {
+        "de": "Cocktails",
+        "en": "Cocktails"
+      }
+    },
+    {
+      "id": "longdrink",
+      "group": "cocktails",
+      "label": {
+        "de": "Longdrinks",
+        "en": "Long drinks"
+      }
+    },
+    {
+      "id": "shot",
+      "group": "shots",
+      "label": {
+        "de": "Shots",
+        "en": "Shots"
+      }
+    },
+    {
+      "id": "shooter",
+      "group": "shots",
+      "label": {
+        "de": "Shooters",
+        "en": "Shooters"
+      }
+    },
+    {
+      "id": "wine",
+      "group": "wine",
+      "label": {
+        "de": "Deutsche Qualitätsweine",
+        "en": "German quality wines"
+      }
+    },
+    {
+      "id": "sparkling",
+      "group": "wine",
+      "label": {
+        "de": "Schaum- & Perlweine",
+        "en": "Sparkling wine"
+      }
+    },
+    {
+      "id": "soft",
+      "group": "soft",
+      "label": {
+        "de": "Alkoholfreie Getränke",
+        "en": "Soft drinks"
+      }
+    },
+    {
+      "id": "juice",
+      "group": "soft",
+      "label": {
+        "de": "Säfte",
+        "en": "Juices"
+      }
+    },
+    {
+      "id": "mocktail",
+      "group": "soft",
+      "label": {
+        "de": "Alkoholfreie Cocktails",
+        "en": "Alcohol-free cocktails"
+      }
+    },
+    {
+      "id": "hot",
+      "group": "hot",
+      "label": {
+        "de": "Heißgetränke",
+        "en": "Hot drinks"
+      }
+    },
+    {
+      "id": "pub-grub",
+      "group": "food",
+      "label": {
+        "de": "Pub Grub",
+        "en": "Pub grub"
+      }
+    },
+    {
+      "id": "pizza",
+      "group": "food",
+      "label": {
+        "de": "Pizza",
+        "en": "Pizza"
+      }
+    },
+    {
+      "id": "flammkuchen",
+      "group": "food",
+      "label": {
+        "de": "Flammkuchen",
+        "en": "Tarte flambée"
+      }
+    },
+    {
+      "id": "toast",
+      "group": "food",
+      "label": {
+        "de": "Baguettes & Toasts",
+        "en": "Baguettes & toasts"
+      }
+    },
+    {
+      "id": "salad",
+      "group": "food",
+      "label": {
+        "de": "Salate",
+        "en": "Salads"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "guinness",
+      "name": "Guinness",
+      "category": "draught",
+      "description": {
+        "de": "Irish Stout",
+        "en": "Irish stout"
+      },
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "kilkenny",
+      "name": "Kilkenny",
+      "category": "draught",
+      "description": {
+        "de": "Irish Red Ale",
+        "en": "Irish red ale"
+      },
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "hop-house-13",
+      "name": "Hop House 13",
+      "category": "draught",
+      "description": {
+        "de": "Irish Lager",
+        "en": "Irish lager"
+      },
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "stuttgarter-export",
+      "name": "Stuttgarter Hofbräu Export",
+      "category": "draught",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        }
+      ]
+    },
+    {
+      "id": "malteser-hefeweizen",
+      "name": "Malteser Hefeweizen",
+      "category": "draught",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        }
+      ]
+    },
+    {
+      "id": "koelsch",
+      "name": "Kölsch",
+      "category": "draught",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.5
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.8
+        }
+      ]
+    },
+    {
+      "id": "jever",
+      "name": "Jever Pilsner",
+      "category": "draught",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3.2
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.8
+        }
+      ]
+    },
+    {
+      "id": "kaethchenbier",
+      "name": "Käthchenbier",
+      "category": "draught",
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3.2
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.8
+        }
+      ]
+    },
+    {
+      "id": "augustiner-hell",
+      "name": "Augustiner Lager Hell",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,5 l",
+          "price": 4.2
+        }
+      ]
+    },
+    {
+      "id": "augustiner-edelstoff",
+      "name": "Augustiner Edelstoff",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,5 l",
+          "price": 4.2
+        }
+      ]
+    },
+    {
+      "id": "becks",
+      "name": "Beck's",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "clausthaler",
+      "name": {
+        "de": "Clausthaler alkoholfrei",
+        "en": "Clausthaler alcohol-free"
+      },
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "corona",
+      "name": "Corona",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 4.1
+        }
+      ]
+    },
+    {
+      "id": "hefeweizen-bottle",
+      "name": "Hefeweizen",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,5 l",
+          "price": 4.2
+        }
+      ]
+    },
+    {
+      "id": "weizen-kristall-dunkel",
+      "name": {
+        "de": "Weizen Kristall oder Dunkel",
+        "en": "Wheat beer, crystal or dark"
+      },
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,5 l",
+          "price": 4.2
+        }
+      ]
+    },
+    {
+      "id": "desperados",
+      "name": "Desperados",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 4.1
+        }
+      ]
+    },
+    {
+      "id": "cluss-keller-pils",
+      "name": "Cluss Keller Pils",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "kaepsele",
+      "name": "Stuttgarter Hofbräu Käpsele",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "hefeweizen-alkoholfrei",
+      "name": {
+        "de": "Hefeweizen alkoholfrei",
+        "en": "Hefeweizen alcohol-free"
+      },
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,5 l",
+          "price": 4.2
+        }
+      ]
+    },
+    {
+      "id": "wulle",
+      "name": "Wulle",
+      "category": "bottled",
+      "description": {
+        "de": "Vollbier",
+        "en": "Vollbier (lager)"
+      },
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "heineken",
+      "name": "Heineken",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "rothaus-pils",
+      "name": "Rothaus Pils",
+      "category": "bottled",
+      "servings": [
+        {
+          "label": "0,33 l",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "bananen-weizen",
+      "name": "Bananen-Weizen",
+      "category": "beer-mix",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "cola-weizen",
+      "name": "Cola-Weizen",
+      "category": "beer-mix",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8",
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "diesel",
+      "name": "Diesel",
+      "category": "beer-mix",
+      "description": {
+        "de": "Bier, Cola",
+        "en": "Beer, cola"
+      },
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8",
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "hannes-weizen",
+      "name": "„Hannes“-Weizen",
+      "category": "beer-mix",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "kirsch-weizen",
+      "name": "Kirsch-Weizen",
+      "category": "beer-mix",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "russ",
+      "name": "Russ",
+      "category": "beer-mix",
+      "description": {
+        "de": "Weizen, Limo",
+        "en": "Wheat beer, lemonade"
+      },
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "radler",
+      "name": "Radler",
+      "category": "beer-mix",
+      "description": {
+        "de": "Bier, Limo",
+        "en": "Beer, lemonade"
+      },
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 3
+        },
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "radler-alkoholfrei",
+      "name": {
+        "de": "Radler alkoholfrei",
+        "en": "Radler alcohol-free"
+      },
+      "category": "beer-mix",
+      "description": {
+        "de": "Bier, Limo",
+        "en": "Beer, lemonade"
+      },
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,5 l",
+          "price": 4.6
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        }
+      ]
+    },
+    {
+      "id": "black-and-tan",
+      "name": "Black & Tan",
+      "category": "irish-beer-mix",
+      "description": {
+        "de": "Guinness, Kilkenny",
+        "en": "Guinness, Kilkenny"
+      },
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "black-velvet",
+      "name": "Black Velvet",
+      "category": "irish-beer-mix",
+      "description": {
+        "de": "Guinness, Cider",
+        "en": "Guinness, cider"
+      },
+      "codes": [
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "black-hannes",
+      "name": "Black Hannes",
+      "category": "irish-beer-mix",
+      "description": {
+        "de": "Guinness, Johannisbeer",
+        "en": "Guinness, blackcurrant"
+      },
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "export-hefe-xl",
+      "name": "Export / Hefe",
+      "category": "pitcher",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Maß 1 l",
+            "en": "Stein 1 l"
+          },
+          "price": 8
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 12.2
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 23
+        }
+      ]
+    },
+    {
+      "id": "kaethchenbier-xl",
+      "name": "Käthchenbier",
+      "category": "pitcher",
+      "servings": [
+        {
+          "label": {
+            "de": "Maß 1 l",
+            "en": "Stein 1 l"
+          },
+          "price": 9
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 13.2
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 24.5
+        }
+      ]
+    },
+    {
+      "id": "jever-koelsch-xl",
+      "name": "Jever / Kölsch",
+      "category": "pitcher",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Maß 1 l",
+            "en": "Stein 1 l"
+          },
+          "price": 9
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 13.2
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 24.5
+        }
+      ]
+    },
+    {
+      "id": "guinness-cider-xl",
+      "name": "Guinness / Cider",
+      "category": "pitcher",
+      "servings": [
+        {
+          "label": {
+            "de": "Maß 1 l",
+            "en": "Stein 1 l"
+          },
+          "price": 10.5
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 17
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 32.5
+        }
+      ]
+    },
+    {
+      "id": "kilkenny-hop-house-xl",
+      "name": "Kilkenny / Hop House 13",
+      "category": "pitcher",
+      "codes": [
+        "A"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Maß 1 l",
+            "en": "Stein 1 l"
+          },
+          "price": 10.5
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 17
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 32.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite-xl",
+      "name": "Snakebite",
+      "category": "pitcher",
+      "description": {
+        "de": "Cider, Bier",
+        "en": "Cider, beer"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Maß 1 l",
+            "en": "Stein 1 l"
+          },
+          "price": 10.5
+        },
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 17
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 32.5
+        }
+      ]
+    },
+    {
+      "id": "rum-vodka-soft-xl",
+      "name": {
+        "de": "Rum / Wodka & Softdrink",
+        "en": "Rum / vodka & soft drink"
+      },
+      "category": "pitcher",
+      "description": {
+        "de": "Zusatzstoffe: siehe Alkoholfreie Getränke",
+        "en": "Additives: see soft drinks"
+      },
+      "servings": [
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 28
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 50
+        }
+      ]
+    },
+    {
+      "id": "vodka-energy-lemon-xl",
+      "name": {
+        "de": "Wodka & Energy / Lemon",
+        "en": "Vodka & energy / lemon"
+      },
+      "category": "pitcher",
+      "description": {
+        "de": "Zusatzstoffe: siehe Alkoholfreie Getränke",
+        "en": "Additives: see soft drinks"
+      },
+      "servings": [
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 33
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "havana-captain-soft-xl",
+      "name": {
+        "de": "Havana / Captain Morgan & Softdrink",
+        "en": "Havana / Captain Morgan & soft drink"
+      },
+      "category": "pitcher",
+      "description": {
+        "de": "Zusatzstoffe: siehe Alkoholfreie Getränke",
+        "en": "Additives: see soft drinks"
+      },
+      "servings": [
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 33
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "whisky-cola-xl",
+      "name": "Whisky Cola",
+      "category": "pitcher",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 32
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 58
+        }
+      ]
+    },
+    {
+      "id": "jacky-cola-xl",
+      "name": "Jacky Cola",
+      "category": "pitcher",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "Pitcher 1,5 l",
+          "price": 37
+        },
+        {
+          "label": {
+            "de": "Säule 3 l",
+            "en": "Tower 3 l"
+          },
+          "price": 68
+        }
+      ]
+    },
+    {
+      "id": "kranz-koelsch",
+      "name": "Kranz Kölsch",
+      "category": "pitcher",
+      "description": {
+        "de": "Kölsch im Kranz, zum Teilen",
+        "en": "A ring of Kölsch glasses to share"
+      },
+      "servings": [
+        {
+          "price": 22
+        }
+      ]
+    },
+    {
+      "id": "tasting-board",
+      "name": {
+        "de": "Tasting-Brett",
+        "en": "Tasting board"
+      },
+      "category": "pitcher",
+      "description": {
+        "de": "Guinness, Kilkenny & Hop House 13",
+        "en": "Guinness, Kilkenny & Hop House 13"
+      },
+      "servings": [
+        {
+          "label": "3 × 0,2 l",
+          "price": 7.5
+        }
+      ]
+    },
+    {
+      "id": "stowford",
+      "name": "Stowford",
+      "category": "cider",
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "somersby",
+      "name": "Somersby",
+      "category": "cider",
+      "description": {
+        "de": "Verschiedene Sorten",
+        "en": "Various flavours"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Flasche 0,33 l",
+            "en": "Bottle 0,33 l"
+          },
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "bulmers",
+      "name": "Bulmers",
+      "category": "cider",
+      "description": {
+        "de": "Apfel, Birne, Red Berry",
+        "en": "Apple, pear, red berry"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Flasche 0,5 l",
+            "en": "Bottle 0,5 l"
+          },
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "cider-red",
+      "name": "Cider Red",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Himbeersirup",
+        "en": "Cider, raspberry syrup"
+      },
+      "codes": [
+        "3",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "cider-green",
+      "name": "Cider Green",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Waldmeistersirup",
+        "en": "Cider, woodruff syrup"
+      },
+      "codes": [
+        "3",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "cider-black",
+      "name": "Cider Black",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Johannisbeer-Nektar",
+        "en": "Cider, blackcurrant nectar"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "cider-cherry",
+      "name": "Cider Cherry",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Kirschsirup",
+        "en": "Cider, cherry syrup"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "cider-strawberry",
+      "name": "Cider Strawberry",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Erdbeersirup",
+        "en": "Cider, strawberry syrup"
+      },
+      "codes": [
+        "3",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite",
+      "name": "Snakebite",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Bier",
+        "en": "Cider, beer"
+      },
+      "codes": [
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite-red",
+      "name": "Snakebite Red",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Bier, Himbeersirup",
+        "en": "Cider, beer, raspberry syrup"
+      },
+      "codes": [
+        "3",
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite-green",
+      "name": "Snakebite Green",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Bier, Waldmeistersirup",
+        "en": "Cider, beer, woodruff syrup"
+      },
+      "codes": [
+        "3",
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite-black",
+      "name": "Snakebite Black",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Bier, Johannisbeer-Nektar",
+        "en": "Cider, beer, blackcurrant nectar"
+      },
+      "codes": [
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite-cherry",
+      "name": "Snakebite Cherry",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Bier, Kirschsirup",
+        "en": "Cider, beer, cherry syrup"
+      },
+      "codes": [
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "snakebite-strawberry",
+      "name": "Snakebite Strawberry",
+      "category": "cider-mix",
+      "description": {
+        "de": "Cider, Bier, Erdbeersirup",
+        "en": "Cider, beer, strawberry syrup"
+      },
+      "codes": [
+        "3",
+        "A",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3
+        },
+        {
+          "label": "0,3 l",
+          "price": 3.9
+        },
+        {
+          "label": "0,5 l",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "jack-daniels",
+      "name": "Jack Daniel's",
+      "category": "whisky",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.2
+        },
+        {
+          "label": "4 cl",
+          "price": 6.9
+        }
+      ]
+    },
+    {
+      "id": "jim-beam",
+      "name": "Jim Beam",
+      "category": "whisky",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.2
+        },
+        {
+          "label": "4 cl",
+          "price": 6.9
+        }
+      ]
+    },
+    {
+      "id": "southern-comfort",
+      "name": "Southern Comfort",
+      "category": "whisky",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.2
+        },
+        {
+          "label": "4 cl",
+          "price": 6.9
+        }
+      ]
+    },
+    {
+      "id": "ardbeg",
+      "name": "Ardbeg",
+      "category": "single-malt",
+      "description": {
+        "de": "10 Jahre",
+        "en": "10 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.3
+        },
+        {
+          "label": "4 cl",
+          "price": 8.5
+        }
+      ]
+    },
+    {
+      "id": "cragganmore",
+      "name": "Cragganmore",
+      "category": "single-malt",
+      "description": {
+        "de": "12 Jahre",
+        "en": "12 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.6
+        },
+        {
+          "label": "4 cl",
+          "price": 8.8
+        }
+      ]
+    },
+    {
+      "id": "dalwhinnie",
+      "name": "Dalwhinnie",
+      "category": "single-malt",
+      "description": {
+        "de": "15 Jahre",
+        "en": "15 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.2
+        },
+        {
+          "label": "4 cl",
+          "price": 8.4
+        }
+      ]
+    },
+    {
+      "id": "glenkinchie",
+      "name": "Glenkinchie",
+      "category": "single-malt",
+      "description": {
+        "de": "10 Jahre",
+        "en": "10 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.6
+        },
+        {
+          "label": "4 cl",
+          "price": 8.8
+        }
+      ]
+    },
+    {
+      "id": "glenlivet",
+      "name": "Glenlivet",
+      "category": "single-malt",
+      "description": {
+        "de": "12 Jahre",
+        "en": "12 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.4
+        },
+        {
+          "label": "4 cl",
+          "price": 7.6
+        }
+      ]
+    },
+    {
+      "id": "jura",
+      "name": "Jura",
+      "category": "single-malt",
+      "description": {
+        "de": "10 Jahre",
+        "en": "10 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.6
+        },
+        {
+          "label": "4 cl",
+          "price": 7.8
+        }
+      ]
+    },
+    {
+      "id": "lagavulin",
+      "name": "Lagavulin",
+      "category": "single-malt",
+      "description": {
+        "de": "16 Jahre",
+        "en": "16 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 8.9
+        },
+        {
+          "label": "4 cl",
+          "price": 15.6
+        }
+      ]
+    },
+    {
+      "id": "laphroaig",
+      "name": "Laphroaig",
+      "category": "single-malt",
+      "description": {
+        "de": "10 Jahre",
+        "en": "10 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.4
+        },
+        {
+          "label": "4 cl",
+          "price": 8.6
+        }
+      ]
+    },
+    {
+      "id": "oban",
+      "name": "Oban",
+      "category": "single-malt",
+      "description": {
+        "de": "14 Jahre",
+        "en": "14 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 6.4
+        },
+        {
+          "label": "4 cl",
+          "price": 9.6
+        }
+      ]
+    },
+    {
+      "id": "talisker",
+      "name": "Talisker",
+      "category": "single-malt",
+      "description": {
+        "de": "10 Jahre",
+        "en": "10 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.4
+        },
+        {
+          "label": "4 cl",
+          "price": 8.6
+        }
+      ]
+    },
+    {
+      "id": "cardhu",
+      "name": "Cardhu",
+      "category": "single-malt",
+      "description": {
+        "de": "12 Jahre",
+        "en": "12 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.7
+        },
+        {
+          "label": "4 cl",
+          "price": 8.9
+        }
+      ]
+    },
+    {
+      "id": "ballantines",
+      "name": "Ballantine's",
+      "category": "scotch",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.4
+        },
+        {
+          "label": "4 cl",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "chivas-regal",
+      "name": "Chivas Regal",
+      "category": "scotch",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.1
+        },
+        {
+          "label": "4 cl",
+          "price": 7.7
+        }
+      ]
+    },
+    {
+      "id": "dimple",
+      "name": "Dimple de Luxe",
+      "category": "scotch",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.4
+        },
+        {
+          "label": "4 cl",
+          "price": 7.3
+        }
+      ]
+    },
+    {
+      "id": "glenfiddich",
+      "name": "Glenfiddich",
+      "category": "scotch",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.9
+        },
+        {
+          "label": "4 cl",
+          "price": 6.4
+        }
+      ]
+    },
+    {
+      "id": "johnnie-walker-red",
+      "name": "Johnnie Walker Red Label",
+      "category": "scotch",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.9
+        },
+        {
+          "label": "4 cl",
+          "price": 6.4
+        }
+      ]
+    },
+    {
+      "id": "johnnie-walker-black",
+      "name": "Johnnie Walker Black Label",
+      "category": "scotch",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.3
+        },
+        {
+          "label": "4 cl",
+          "price": 7.1
+        }
+      ]
+    },
+    {
+      "id": "bushmills",
+      "name": "Bushmills",
+      "category": "irish-whiskey",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.4
+        },
+        {
+          "label": "4 cl",
+          "price": 7.3
+        }
+      ]
+    },
+    {
+      "id": "connemara",
+      "name": "Connemara",
+      "category": "irish-whiskey",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.6
+        },
+        {
+          "label": "4 cl",
+          "price": 7.7
+        }
+      ]
+    },
+    {
+      "id": "dubliner",
+      "name": "Dubliner",
+      "category": "irish-whiskey",
+      "description": {
+        "de": "Whiskeylikör",
+        "en": "Whiskey liqueur"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.3
+        },
+        {
+          "label": "4 cl",
+          "price": 7.1
+        }
+      ]
+    },
+    {
+      "id": "irish-mist",
+      "name": "Irish Mist",
+      "category": "irish-whiskey",
+      "description": {
+        "de": "Whiskeylikör",
+        "en": "Whiskey liqueur"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.3
+        },
+        {
+          "label": "4 cl",
+          "price": 7.1
+        }
+      ]
+    },
+    {
+      "id": "jameson",
+      "name": "Jameson",
+      "category": "irish-whiskey",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.4
+        },
+        {
+          "label": "4 cl",
+          "price": 7.3
+        }
+      ]
+    },
+    {
+      "id": "redbreast",
+      "name": "Redbreast",
+      "category": "irish-whiskey",
+      "description": {
+        "de": "12 Jahre",
+        "en": "12 years"
+      },
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 5.6
+        },
+        {
+          "label": "4 cl",
+          "price": 8.8
+        }
+      ]
+    },
+    {
+      "id": "paddy",
+      "name": "Paddy Old Irish",
+      "category": "irish-whiskey",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.1
+        },
+        {
+          "label": "4 cl",
+          "price": 6.7
+        }
+      ]
+    },
+    {
+      "id": "tyrconnell",
+      "name": "Tyrconnell",
+      "category": "irish-whiskey",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.2
+        },
+        {
+          "label": "4 cl",
+          "price": 7.1
+        }
+      ]
+    },
+    {
+      "id": "tullamore-dew",
+      "name": "Tullamore Dew",
+      "category": "irish-whiskey",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 4.4
+        },
+        {
+          "label": "4 cl",
+          "price": 7.3
+        }
+      ]
+    },
+    {
+      "id": "highball",
+      "name": "Highball",
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Whisky, Ginger Ale",
+        "en": "4 cl whisky, ginger ale"
+      },
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "jameson-ginger",
+      "name": "Jameson Ginger",
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Jameson, Ginger Ale",
+        "en": "4 cl Jameson, ginger ale"
+      },
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "jack-honey-ginger",
+      "name": "Jack Honey Ginger",
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Jack Daniel's, Ginger Ale, Limette",
+        "en": "4 cl Jack Daniel's, ginger ale, lime"
+      },
+      "codes": [
+        "2",
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "jack-honey-tonic",
+      "name": "Jack Honey Tonic",
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Jack Daniel's, Tonic, Limette",
+        "en": "4 cl Jack Daniel's, tonic, lime"
+      },
+      "codes": [
+        "2"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "irish-pub-lemonade",
+      "name": "Irish Pub Lemonade",
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Whisky, 1 cl Triple Sec, Zitrone, Limette, Limo",
+        "en": "4 cl whisky, 1 cl triple sec, lemon, lime, lemonade"
+      },
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 10
+        }
+      ]
+    },
+    {
+      "id": "whisky-apfel",
+      "name": {
+        "de": "Whisky Apfel",
+        "en": "Whisky Apple"
+      },
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Whisky, Apfelsaft",
+        "en": "4 cl whisky, apple juice"
+      },
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "whisky-sour",
+      "name": "Whisky Sour",
+      "category": "whisky-mix",
+      "description": {
+        "de": "4 cl Whisky, Zitronensaft, Zuckersirup",
+        "en": "4 cl whisky, lemon juice, sugar syrup"
+      },
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "jacky-cola",
+      "name": "Jacky Cola",
+      "category": "whisky-mix",
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 7
+        },
+        {
+          "label": "0,3 l",
+          "price": 10
+        }
+      ]
+    },
+    {
+      "id": "whisky-cola",
+      "name": "Whisky Cola",
+      "category": "whisky-mix",
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "anabulika",
+      "name": "Anabulika",
+      "category": "cocktail",
+      "description": {
+        "de": "Wodka, Whisky, Orangensaft, Energy-Drink",
+        "en": "Vodka, whisky, orange juice, energy drink"
+      },
+      "codes": [
+        "1"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "caipirinha",
+      "name": "Caipirinha",
+      "category": "cocktail",
+      "description": {
+        "de": "Cachaça, Zitronensaft, Rohrzucker, Limetten",
+        "en": "Cachaça, lemon juice, cane sugar, limes"
+      },
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 12
+        }
+      ]
+    },
+    {
+      "id": "cosmopolitan",
+      "name": "Cosmopolitan",
+      "category": "cocktail",
+      "description": {
+        "de": "Wodka, Triple Sec, Cranberry-Nektar, Zitronensaft",
+        "en": "Vodka, triple sec, cranberry nectar, lemon juice"
+      },
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "irish-dream",
+      "name": "Irish Dream",
+      "category": "cocktail",
+      "description": {
+        "de": "Whisky, Orangenlikör, Grenadine, Orangensaft, Zitronensaft",
+        "en": "Whisky, orange liqueur, grenadine, orange juice, lemon juice"
+      },
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "lady-love",
+      "name": "Lady Love",
+      "category": "cocktail",
+      "description": {
+        "de": "Sekt, Ficken, Grenadine, Orangensaft, Ananassaft",
+        "en": "Sparkling wine, Ficken, grenadine, orange juice, pineapple juice"
+      },
+      "codes": [
+        "3",
+        "8",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "long-island-iced-tea",
+      "name": "Long Island Iced Tea",
+      "category": "cocktail",
+      "description": {
+        "de": "Gin, Wodka, Tequila, Cointreau, Rum, Zitronensaft, Orangensaft, Cola",
+        "en": "Gin, vodka, tequila, Cointreau, rum, lemon juice, orange juice, cola"
+      },
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 12
+        }
+      ]
+    },
+    {
+      "id": "mojito",
+      "name": "Mojito",
+      "category": "cocktail",
+      "description": {
+        "de": "Havana, Minze, Limette, brauner Zucker",
+        "en": "Havana rum, mint, lime, brown sugar"
+      },
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 12
+        }
+      ]
+    },
+    {
+      "id": "pina-colada",
+      "name": "Piña Colada",
+      "category": "cocktail",
+      "description": {
+        "de": "Weißer Rum, Ananassaft, Kokossirup, Sahne",
+        "en": "White rum, pineapple juice, coconut syrup, cream"
+      },
+      "codes": [
+        "8",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 8.5
+        }
+      ]
+    },
+    {
+      "id": "planters-punch",
+      "name": "Planters Punch",
+      "category": "cocktail",
+      "description": {
+        "de": "Brauner Rum, Zitronensaft, Orangensaft, Zuckersirup",
+        "en": "Dark rum, lemon juice, orange juice, sugar syrup"
+      },
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 8.5
+        }
+      ]
+    },
+    {
+      "id": "sex-on-the-beach",
+      "name": "Sex on the Beach",
+      "category": "cocktail",
+      "description": {
+        "de": "Wodka, Pfirsichlikör, Cranberry-Nektar, Orangensaft",
+        "en": "Vodka, peach liqueur, cranberry nectar, orange juice"
+      },
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "silent-death",
+      "name": "Silent Death",
+      "category": "cocktail",
+      "description": {
+        "de": "Wodka, Rum, Tequila, Ficken, Triple Sec, Mango-Nektar, Maracuja-Nektar",
+        "en": "Vodka, rum, tequila, Ficken, triple sec, mango nectar, passion fruit nectar"
+      },
+      "codes": [
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 12
+        }
+      ]
+    },
+    {
+      "id": "swimming-pool",
+      "name": "Swimming Pool",
+      "category": "cocktail",
+      "description": {
+        "de": "Wodka, Blue Curaçao, Kokossirup, Ananassaft, Sahne",
+        "en": "Vodka, blue curaçao, coconut syrup, pineapple juice, cream"
+      },
+      "codes": [
+        "8",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "tequila-sunrise",
+      "name": "Tequila Sunrise",
+      "category": "cocktail",
+      "description": {
+        "de": "Tequila, Zitronensaft, Orangensaft, Grenadine",
+        "en": "Tequila, lemon juice, orange juice, grenadine"
+      },
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 8.5
+        }
+      ]
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "category": "cocktail",
+      "description": {
+        "de": "Weißer Rum, Apricot Brandy, Grenadine, Orangensaft, Maracuja-Nektar",
+        "en": "White rum, apricot brandy, grenadine, orange juice, passion fruit nectar"
+      },
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "pitcher-cocktail",
+      "name": {
+        "de": "Pitcher-Cocktail 1,5 l",
+        "en": "Pitcher cocktail 1,5 l"
+      },
+      "category": "cocktail",
+      "description": {
+        "de": "Preis je nach Cocktail, außer Caipirinha & Mojito",
+        "en": "Price depends on the cocktail, except Caipirinha & Mojito"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Cocktail à 8,50 €",
+            "en": "€8.50 cocktail"
+          },
+          "price": 34
+        },
+        {
+          "label": {
+            "de": "Cocktail à 9,00 €",
+            "en": "€9.00 cocktail"
+          },
+          "price": 36
+        },
+        {
+          "label": {
+            "de": "Cocktail à 12,00 €",
+            "en": "€12.00 cocktail"
+          },
+          "price": 48
+        }
+      ]
+    },
+    {
+      "id": "captain-morgan-cola",
+      "name": "Captain Morgan Cola",
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "cuba-libre",
+      "name": "Cuba Libre",
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "ficken-longdrink",
+      "name": "Ficken",
+      "category": "longdrink",
+      "description": {
+        "de": "Kirsch, Mango, Maracuja oder Orange",
+        "en": "Cherry, mango, passion fruit or orange"
+      },
+      "codes": [
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "gin-tonic",
+      "name": "Gin Tonic",
+      "category": "longdrink",
+      "codes": [
+        "2"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "hugo",
+      "name": "Hugo",
+      "category": "longdrink",
+      "description": {
+        "de": "Holundersirup, Prosecco, Limette, Minze",
+        "en": "Elderflower syrup, prosecco, lime, mint"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "jaeger-cola",
+      "name": "Jäger Cola",
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "jaeger-energy",
+      "name": "Jäger Energy",
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "rum-cola",
+      "name": "Rum Cola",
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "spritz",
+      "name": "Spritz",
+      "category": "longdrink",
+      "description": {
+        "de": "Aperol, Prosecco, Soda",
+        "en": "Aperol, prosecco, soda"
+      },
+      "codes": [
+        "2",
+        "3",
+        "C"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "southern-comfort-lemonade",
+      "name": {
+        "de": "Southern Comfort mit Limonade",
+        "en": "Southern Comfort & lemonade"
+      },
+      "category": "longdrink",
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "vodka-energy",
+      "name": {
+        "de": "Wodka Energy",
+        "en": "Vodka Energy"
+      },
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "vodka-lemon",
+      "name": {
+        "de": "Wodka Lemon",
+        "en": "Vodka Lemon"
+      },
+      "category": "longdrink",
+      "codes": [
+        "2",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "asbach-cola",
+      "name": "Asbach Cola",
+      "category": "longdrink",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 5
+        },
+        {
+          "label": "0,3 l",
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "absinth",
+      "name": {
+        "de": "Absinth",
+        "en": "Absinthe"
+      },
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.6
+        }
+      ]
+    },
+    {
+      "id": "ficken",
+      "name": "Ficken",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "grappa",
+      "name": "Grappa",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "jaegermeister",
+      "name": "Jägermeister",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "joster",
+      "name": "Joster",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "kirschlikoer",
+      "name": {
+        "de": "Kirschlikör",
+        "en": "Cherry liqueur"
+      },
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "korn",
+      "name": "Korn",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "obstwasser",
+      "name": {
+        "de": "Obstwasser",
+        "en": "Fruit brandy"
+      },
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "ouzo",
+      "name": "Ouzo",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "pfefferminzlikoer",
+      "name": {
+        "de": "Pfefferminzlikör",
+        "en": "Peppermint liqueur"
+      },
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "ramazzotti",
+      "name": "Ramazzotti",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "sambuca",
+      "name": "Sambuca",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "tequila",
+      "name": "Tequila",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "willi",
+      "name": "Willi",
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "wodka",
+      "name": {
+        "de": "Wodka",
+        "en": "Vodka"
+      },
+      "category": "shot",
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.3
+        }
+      ]
+    },
+    {
+      "id": "wodka-waldmeister",
+      "name": {
+        "de": "Wodka-Waldmeister",
+        "en": "Vodka woodruff"
+      },
+      "category": "shot",
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "baileys-on-ice",
+      "name": {
+        "de": "Bailey's auf Eis",
+        "en": "Bailey's on ice"
+      },
+      "category": "shot",
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "label": "2 cl",
+          "price": 3.9
+        },
+        {
+          "label": "4 cl",
+          "price": 6.9
+        }
+      ]
+    },
+    {
+      "id": "baby-guinness",
+      "name": "Baby Guinness",
+      "category": "shooter",
+      "description": {
+        "de": "Kahlúa, Bailey's",
+        "en": "Kahlúa, Bailey's"
+      },
+      "codes": [
+        "1",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": "4 cl",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "b52",
+      "name": "B52",
+      "category": "shooter",
+      "description": {
+        "de": "Kahlúa, Bailey's, brauner Rum",
+        "en": "Kahlúa, Bailey's, dark rum"
+      },
+      "codes": [
+        "1",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": "4 cl",
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "irish-car-bomb",
+      "name": "Irish Car Bomb",
+      "category": "shooter",
+      "description": {
+        "de": "4 cl Whiskey & Bailey's im Glas Guinness",
+        "en": "4 cl whiskey & Bailey's dropped into Guinness"
+      },
+      "codes": [
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 7
+        },
+        {
+          "label": "0,5 l",
+          "price": 10
+        }
+      ]
+    },
+    {
+      "id": "kamikaze",
+      "name": "Kamikaze",
+      "category": "shooter",
+      "description": {
+        "de": "Wodka, Triple Sec, Zitronensaft",
+        "en": "Vodka, triple sec, lemon juice"
+      },
+      "servings": [
+        {
+          "label": "4 cl",
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "u-boot",
+      "name": "U-Boot",
+      "category": "shooter",
+      "description": {
+        "de": "Wodka, Miranda",
+        "en": "Vodka, Miranda"
+      },
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 6
+        }
+      ]
+    },
+    {
+      "id": "jaeger-bomb",
+      "name": "Jäger Bomb",
+      "category": "shooter",
+      "description": {
+        "de": "Jägermeister, Energy",
+        "en": "Jägermeister, energy drink"
+      },
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "rotwein",
+      "name": {
+        "de": "Rotwein",
+        "en": "Red wine"
+      },
+      "category": "wine",
+      "description": {
+        "de": "Württ. Trollinger mit Lemberger",
+        "en": "Württemberg Trollinger with Lemberger"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Glas 0,25 l",
+            "en": "Glass 0,25 l"
+          },
+          "price": 4.9
+        },
+        {
+          "label": {
+            "de": "Flasche 1 l",
+            "en": "Bottle 1 l"
+          },
+          "price": 16.9
+        }
+      ]
+    },
+    {
+      "id": "weisswein",
+      "name": {
+        "de": "Weißwein",
+        "en": "White wine"
+      },
+      "category": "wine",
+      "description": {
+        "de": "Württ. Riesling",
+        "en": "Württemberg Riesling"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Glas 0,25 l",
+            "en": "Glass 0,25 l"
+          },
+          "price": 4.9
+        },
+        {
+          "label": {
+            "de": "Flasche 1 l",
+            "en": "Bottle 1 l"
+          },
+          "price": 16.9
+        }
+      ]
+    },
+    {
+      "id": "rose",
+      "name": "Rosé",
+      "category": "wine",
+      "description": {
+        "de": "Württ. Weißherbst",
+        "en": "Württemberg Weißherbst"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Glas 0,25 l",
+            "en": "Glass 0,25 l"
+          },
+          "price": 4.9
+        },
+        {
+          "label": {
+            "de": "Flasche 1 l",
+            "en": "Bottle 1 l"
+          },
+          "price": 16.9
+        }
+      ]
+    },
+    {
+      "id": "weinschorle",
+      "name": {
+        "de": "Weinschorle",
+        "en": "Wine spritzer"
+      },
+      "category": "wine",
+      "description": {
+        "de": "Nach Wunsch",
+        "en": "As you like it"
+      },
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Glas 0,25 l",
+            "en": "Glass 0,25 l"
+          },
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "weinschorle-bottle",
+      "name": {
+        "de": "Weinschorle Ice Lemon / Energy",
+        "en": "Wine spritzer Ice Lemon / Energy"
+      },
+      "category": "wine",
+      "servings": [
+        {
+          "label": {
+            "de": "Flasche 0,275 l",
+            "en": "Bottle 0,275 l"
+          },
+          "price": 4.2
+        }
+      ]
+    },
+    {
+      "id": "sekt-rotkaeppchen",
+      "name": {
+        "de": "Sekt „Rotkäppchen“",
+        "en": "Rotkäppchen sparkling wine"
+      },
+      "category": "sparkling",
+      "codes": [
+        "C"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Glas 0,2 l",
+            "en": "Glass 0,2 l"
+          },
+          "price": 4
+        },
+        {
+          "label": {
+            "de": "Flasche 0,75 l",
+            "en": "Bottle 0,75 l"
+          },
+          "price": 17.9
+        }
+      ]
+    },
+    {
+      "id": "prosecco",
+      "name": "Prosecco",
+      "category": "sparkling",
+      "servings": [
+        {
+          "label": {
+            "de": "Glas 0,2 l",
+            "en": "Glass 0,2 l"
+          },
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": "bitter-lemon",
+      "name": "Bitter Lemon",
+      "category": "soft",
+      "codes": [
+        "2",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3.5
+        },
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "miranda",
+      "name": "Miranda",
+      "category": "soft",
+      "description": {
+        "de": "Orangen-Limonade",
+        "en": "Orange soda"
+      },
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.9
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "cola",
+      "name": "Cola",
+      "category": "soft",
+      "codes": [
+        "1",
+        "3",
+        "5",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.9
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "cola-zero",
+      "name": "Cola Zero",
+      "category": "soft",
+      "codes": [
+        "1",
+        "3",
+        "4",
+        "6"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.9
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "red-bull",
+      "name": "Red Bull",
+      "category": "soft",
+      "codes": [
+        "1",
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,25 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "ginger-ale",
+      "name": "Ginger Ale",
+      "category": "soft",
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3.5
+        },
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "spezi",
+      "name": {
+        "de": "Spezi",
+        "en": "Spezi (cola & orange soda)"
+      },
+      "category": "soft",
+      "codes": [
+        "1",
+        "3",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.9
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "tonic-water",
+      "name": "Tonic Water",
+      "category": "soft",
+      "codes": [
+        "2"
+      ],
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 3.5
+        },
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "zitronen-limonade",
+      "name": {
+        "de": "Zitronen-Limonade",
+        "en": "Lemon soda"
+      },
+      "category": "soft",
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.9
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "elephant-bay",
+      "name": {
+        "de": "Elephant Bay Eistee",
+        "en": "Elephant Bay iced tea"
+      },
+      "category": "soft",
+      "description": {
+        "de": "Pfirsich, Granatapfel",
+        "en": "Peach, pomegranate"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Flasche 0,33 l",
+            "en": "Bottle 0,33 l"
+          },
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "bionade-holunder",
+      "name": {
+        "de": "Bionade Holunder",
+        "en": "Bionade elderflower"
+      },
+      "category": "soft",
+      "servings": [
+        {
+          "label": {
+            "de": "Flasche 0,33 l",
+            "en": "Bottle 0,33 l"
+          },
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "teinacher",
+      "name": {
+        "de": "Teinacher Mineralwasser",
+        "en": "Teinacher mineral water"
+      },
+      "category": "soft",
+      "description": {
+        "de": "Still oder mit Kohlensäure",
+        "en": "Still or sparkling"
+      },
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.5
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.5
+        },
+        {
+          "label": {
+            "de": "Flasche 1 l",
+            "en": "Bottle 1 l"
+          },
+          "price": 6
+        }
+      ]
+    },
+    {
+      "id": "bundaberg",
+      "name": "Bundaberg Ginger Brew",
+      "category": "soft",
+      "codes": [
+        "6",
+        "8"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Flasche 0,33 l",
+            "en": "Bottle 0,33 l"
+          },
+          "price": 4
+        }
+      ]
+    },
+    {
+      "id": "apfelsaft",
+      "name": {
+        "de": "Apfelsaft",
+        "en": "Apple juice"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "ananassaft",
+      "name": {
+        "de": "Ananassaft",
+        "en": "Pineapple juice"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "bananen-nektar",
+      "name": {
+        "de": "Bananen-Nektar",
+        "en": "Banana nectar"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "cranberry-nektar",
+      "name": {
+        "de": "Cranberry-Nektar",
+        "en": "Cranberry nectar"
+      },
+      "category": "juice",
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "johannisbeer-nektar",
+      "name": {
+        "de": "Johannisbeer-Nektar",
+        "en": "Blackcurrant nectar"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "kiba",
+      "name": {
+        "de": "Kiba",
+        "en": "Kiba (cherry & banana)"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "kirsch-nektar",
+      "name": {
+        "de": "Kirsch-Nektar",
+        "en": "Cherry nectar"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "mango-nektar",
+      "name": {
+        "de": "Mango-Nektar",
+        "en": "Mango nectar"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "maracuja-nektar",
+      "name": {
+        "de": "Maracuja-Nektar",
+        "en": "Passion fruit nectar"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "orangensaft",
+      "name": {
+        "de": "Orangensaft",
+        "en": "Orange juice"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,4 l",
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "saftschorle",
+      "name": {
+        "de": "Saftschorle",
+        "en": "Juice spritzer"
+      },
+      "category": "juice",
+      "servings": [
+        {
+          "label": "0,2 l",
+          "price": 2.8
+        },
+        {
+          "label": "0,4 l",
+          "price": 3.9
+        }
+      ]
+    },
+    {
+      "id": "babouin",
+      "name": "Babouin",
+      "category": "mocktail",
+      "description": {
+        "de": "Kirsch- & Maracuja-Nektar, Ananas-, Zitronen- & Orangensaft",
+        "en": "Cherry & passion fruit nectar, pineapple, lemon & orange juice"
+      },
+      "codes": [
+        "8"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 7.5
+        }
+      ]
+    },
+    {
+      "id": "bahamas",
+      "name": "Bahamas",
+      "category": "mocktail",
+      "description": {
+        "de": "Apfelsaft, Zitronensaft, Grenadine",
+        "en": "Apple juice, lemon juice, grenadine"
+      },
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 7.5
+        }
+      ]
+    },
+    {
+      "id": "irish-cooler",
+      "name": "Irish Cooler",
+      "category": "mocktail",
+      "description": {
+        "de": "Zitronensaft, Ginger Ale, Zuckersirup",
+        "en": "Lemon juice, ginger ale, sugar syrup"
+      },
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 7.5
+        }
+      ]
+    },
+    {
+      "id": "surprise-surprise",
+      "name": "Surprise-Surprise",
+      "category": "mocktail",
+      "description": {
+        "de": "Alkoholfreie Überraschung",
+        "en": "An alcohol-free surprise"
+      },
+      "servings": [
+        {
+          "label": "0,3 l",
+          "price": 7.5
+        }
+      ]
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "category": "hot",
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 3.8
+        }
+      ]
+    },
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "category": "hot",
+      "servings": [
+        {
+          "price": 2.9
+        }
+      ]
+    },
+    {
+      "id": "heisse-schokolade",
+      "name": {
+        "de": "Heiße Schokolade",
+        "en": "Hot chocolate"
+      },
+      "category": "hot",
+      "codes": [
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 3.8
+        }
+      ]
+    },
+    {
+      "id": "heisse-schokolade-baileys",
+      "name": {
+        "de": "Heiße Schokolade mit Bailey's",
+        "en": "Hot chocolate with Bailey's"
+      },
+      "category": "hot",
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "hot-toddy",
+      "name": "Hot Toddy",
+      "category": "hot",
+      "description": {
+        "de": "2 cl Whisky, Honig, Zitrone, heißes Wasser",
+        "en": "2 cl whisky, honey, lemon, hot water"
+      },
+      "servings": [
+        {
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "irish-coffee",
+      "name": "Irish Coffee",
+      "category": "hot",
+      "description": {
+        "de": "Mit 2 cl Whisky",
+        "en": "With 2 cl whisky"
+      },
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 7
+        }
+      ]
+    },
+    {
+      "id": "kaffee",
+      "name": {
+        "de": "Kaffee",
+        "en": "Coffee"
+      },
+      "category": "hot",
+      "servings": [
+        {
+          "price": 3.4
+        }
+      ]
+    },
+    {
+      "id": "latte-macchiato",
+      "name": "Latte Macchiato",
+      "category": "hot",
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 3.8
+        }
+      ]
+    },
+    {
+      "id": "tee",
+      "name": {
+        "de": "Tee",
+        "en": "Tea"
+      },
+      "category": "hot",
+      "description": {
+        "de": "Verschiedene Sorten",
+        "en": "Various kinds"
+      },
+      "codes": [
+        "3"
+      ],
+      "servings": [
+        {
+          "price": 2.8
+        }
+      ]
+    },
+    {
+      "id": "pub-burger",
+      "name": "Pub Burger",
+      "category": "pub-grub",
+      "description": {
+        "de": "Saftiges Rindfleisch, Käse, Salat, Tomaten, Zwiebeln, Gurke, Sauce",
+        "en": "Juicy beef, cheese, lettuce, tomatoes, onions, pickles, sauce"
+      },
+      "codes": [
+        "3",
+        "6",
+        "A",
+        "B",
+        "E",
+        "F",
+        "H",
+        "I"
+      ],
+      "servings": [
+        {
+          "price": 7.9
+        },
+        {
+          "label": {
+            "de": "mit Pommes / Twisters",
+            "en": "with fries / twisters"
+          },
+          "price": 10.9
+        }
+      ]
+    },
+    {
+      "id": "chicken-burger",
+      "name": "Chicken Burger",
+      "category": "pub-grub",
+      "description": {
+        "de": "Hühnchenfleisch, Salat, Tomaten, Zwiebeln, Gurke, Sauce",
+        "en": "Chicken, lettuce, tomatoes, onions, pickles, sauce"
+      },
+      "codes": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 9.9
+        },
+        {
+          "label": {
+            "de": "mit Pommes / Twisters",
+            "en": "with fries / twisters"
+          },
+          "price": 12.9
+        }
+      ]
+    },
+    {
+      "id": "chicken-nuggets",
+      "name": "Chicken Nuggets",
+      "category": "pub-grub",
+      "servings": [
+        {
+          "price": 7.9
+        },
+        {
+          "label": {
+            "de": "mit Pommes / Twisters",
+            "en": "with fries / twisters"
+          },
+          "price": 10.9
+        }
+      ]
+    },
+    {
+      "id": "fish-chips",
+      "name": "Fish & Chips",
+      "category": "pub-grub",
+      "servings": [
+        {
+          "price": 13.4
+        }
+      ]
+    },
+    {
+      "id": "pommes",
+      "name": "Pommes",
+      "category": "pub-grub",
+      "description": {
+        "de": "Mit Ketchup / Mayo",
+        "en": "With ketchup / mayo"
+      },
+      "servings": [
+        {
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "twisters",
+      "name": "Twisters",
+      "category": "pub-grub",
+      "description": {
+        "de": "Mit Ketchup / Mayo",
+        "en": "With ketchup / mayo"
+      },
+      "servings": [
+        {
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "chips",
+      "name": {
+        "de": "Chips",
+        "en": "Crisps"
+      },
+      "category": "pub-grub",
+      "description": {
+        "de": "Paprika oder Salt 'n' Vinegar",
+        "en": "Paprika or salt 'n' vinegar"
+      },
+      "servings": [
+        {
+          "price": 2
+        }
+      ]
+    },
+    {
+      "id": "irish-stew",
+      "name": {
+        "de": "Irish Stew",
+        "en": "Irish Stew"
+      },
+      "category": "pub-grub",
+      "description": {
+        "de": "Nur am letzten Freitag & Samstag des Monats",
+        "en": "Only on the last Friday & Saturday of the month"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Klein",
+            "en": "Small"
+          },
+          "price": 9.9
+        },
+        {
+          "label": {
+            "de": "Groß",
+            "en": "Large"
+          },
+          "price": 14.9
+        }
+      ]
+    },
+    {
+      "id": "irish-pub-pizza",
+      "name": "Irish Pub Pizza",
+      "category": "pizza",
+      "description": {
+        "de": "Whisky-Schinken, Tomaten, Käse",
+        "en": "Whiskey ham, tomatoes, cheese"
+      },
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "B",
+        "D",
+        "E"
+      ],
+      "servings": [
+        {
+          "price": 12
+        }
+      ]
+    },
+    {
+      "id": "pizza-margherita",
+      "name": "Margherita",
+      "category": "pizza",
+      "description": {
+        "de": "Tomaten, Mozzarella",
+        "en": "Tomatoes, mozzarella"
+      },
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 8.5
+        }
+      ]
+    },
+    {
+      "id": "pizza-zwiebeln",
+      "name": {
+        "de": "Zwiebeln",
+        "en": "Onion"
+      },
+      "category": "pizza",
+      "description": {
+        "de": "Tomaten, Käse, Zwiebeln",
+        "en": "Tomatoes, cheese, onions"
+      },
+      "codes": [
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 9.5
+        }
+      ]
+    },
+    {
+      "id": "pizza-salami",
+      "name": "Salami",
+      "category": "pizza",
+      "description": {
+        "de": "Tomaten, Käse, Salami",
+        "en": "Tomatoes, cheese, salami"
+      },
+      "codes": [
+        "6",
+        "7",
+        "8",
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 9.5
+        }
+      ]
+    },
+    {
+      "id": "pizza-schinken",
+      "name": {
+        "de": "Schinken",
+        "en": "Ham"
+      },
+      "category": "pizza",
+      "description": {
+        "de": "Tomaten, Käse, Schinken",
+        "en": "Tomatoes, cheese, ham"
+      },
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "B",
+        "D",
+        "E"
+      ],
+      "servings": [
+        {
+          "price": 9.5
+        }
+      ]
+    },
+    {
+      "id": "pizza-hawaii",
+      "name": "Hawaii",
+      "category": "pizza",
+      "description": {
+        "de": "Tomaten, Käse, Schinken, Ananas",
+        "en": "Tomatoes, cheese, ham, pineapple"
+      },
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 10.5
+        }
+      ]
+    },
+    {
+      "id": "pizza-diavolo",
+      "name": "Diavolo",
+      "category": "pizza",
+      "description": {
+        "de": "Tomaten, Käse, Peperoni",
+        "en": "Tomatoes, cheese, hot peppers"
+      },
+      "codes": [
+        "6",
+        "7",
+        "8",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 9.5
+        }
+      ]
+    },
+    {
+      "id": "pizza-speziale",
+      "name": "Speziale",
+      "category": "pizza",
+      "description": {
+        "de": "Schinken, Salami oder Diavolo mit Tomaten & Zwiebel",
+        "en": "Ham, salami or Diavolo with tomatoes & onion"
+      },
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 11
+        }
+      ]
+    },
+    {
+      "id": "pizza-extra-topping",
+      "name": {
+        "de": "Jede weitere Zutat",
+        "en": "Each extra topping"
+      },
+      "category": "pizza",
+      "servings": [
+        {
+          "price": 1
+        }
+      ]
+    },
+    {
+      "id": "flammkuchen-schinken-lauch",
+      "name": {
+        "de": "Schinken & Lauch",
+        "en": "Ham & leek"
+      },
+      "category": "flammkuchen",
+      "codes": [
+        "6",
+        "8",
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 10
+        }
+      ]
+    },
+    {
+      "id": "flammkuchen-speck-zwiebeln",
+      "name": {
+        "de": "Speck & Zwiebeln",
+        "en": "Bacon & onions"
+      },
+      "category": "flammkuchen",
+      "codes": [
+        "6",
+        "8",
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 10
+        }
+      ]
+    },
+    {
+      "id": "flammkuchen-kaese",
+      "name": {
+        "de": "Käse",
+        "en": "Cheese"
+      },
+      "category": "flammkuchen",
+      "codes": [
+        "6",
+        "8",
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "price": 10
+        }
+      ]
+    },
+    {
+      "id": "kaese-toast",
+      "name": {
+        "de": "Käse-Toast",
+        "en": "Cheese toast"
+      },
+      "category": "toast",
+      "codes": [
+        "3",
+        "5"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Normal",
+            "en": "Regular"
+          },
+          "price": 3.7
+        },
+        {
+          "label": "Double Up!",
+          "price": 5.9
+        }
+      ]
+    },
+    {
+      "id": "tomaten-kaese-toast",
+      "name": {
+        "de": "Tomaten-Käse-Toast",
+        "en": "Tomato & cheese toast"
+      },
+      "category": "toast",
+      "codes": [
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Normal",
+            "en": "Regular"
+          },
+          "price": 4.1
+        },
+        {
+          "label": "Double Up!",
+          "price": 6.7
+        }
+      ]
+    },
+    {
+      "id": "schinken-kaese-toast",
+      "name": {
+        "de": "Schinken-Käse-Toast",
+        "en": "Ham & cheese toast"
+      },
+      "category": "toast",
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Normal",
+            "en": "Regular"
+          },
+          "price": 4.7
+        },
+        {
+          "label": "Double Up!",
+          "price": 7.4
+        }
+      ]
+    },
+    {
+      "id": "salami-kaese-toast",
+      "name": {
+        "de": "Salami-Käse-Toast",
+        "en": "Salami & cheese toast"
+      },
+      "category": "toast",
+      "codes": [
+        "6",
+        "7",
+        "8",
+        "A",
+        "B"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Normal",
+            "en": "Regular"
+          },
+          "price": 4.7
+        },
+        {
+          "label": "Double Up!",
+          "price": 7.4
+        }
+      ]
+    },
+    {
+      "id": "hawaii-toast",
+      "name": "Hawaii-Toast",
+      "category": "toast",
+      "description": {
+        "de": "Schinken, Ananas, Käse",
+        "en": "Ham, pineapple, cheese"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Normal",
+            "en": "Regular"
+          },
+          "price": 5.5
+        },
+        {
+          "label": "Double Up!",
+          "price": 7.9
+        }
+      ]
+    },
+    {
+      "id": "speziale-toast",
+      "name": "Speziale-Toast",
+      "category": "toast",
+      "description": {
+        "de": "Schinken, Salami oder Diavolo mit Tomaten & Zwiebel",
+        "en": "Ham, salami or Diavolo with tomatoes & onion"
+      },
+      "servings": [
+        {
+          "label": {
+            "de": "Normal",
+            "en": "Regular"
+          },
+          "price": 5.7
+        },
+        {
+          "label": "Double Up!",
+          "price": 8.4
+        }
+      ]
+    },
+    {
+      "id": "schinken-kaese-baguette",
+      "name": {
+        "de": "Schinken-Käse-Baguette",
+        "en": "Ham & cheese baguette"
+      },
+      "category": "toast",
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "diavolo-baguette",
+      "name": "„Diavolo“-Baguette",
+      "category": "toast",
+      "description": {
+        "de": "Tomaten, Käse, Peperoni",
+        "en": "Tomatoes, cheese, hot peppers"
+      },
+      "codes": [
+        "6",
+        "7",
+        "8",
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "salami-kaese-baguette",
+      "name": {
+        "de": "Salami-Käse-Baguette",
+        "en": "Salami & cheese baguette"
+      },
+      "category": "toast",
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 8
+        }
+      ]
+    },
+    {
+      "id": "speziale-baguette",
+      "name": "Speziale-Baguette",
+      "category": "toast",
+      "description": {
+        "de": "Schinken, Salami oder Diavolo mit Tomaten & Zwiebel",
+        "en": "Ham, salami or Diavolo with tomatoes & onion"
+      },
+      "codes": [
+        "5",
+        "6",
+        "7",
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "servings": [
+        {
+          "price": 9
+        }
+      ]
+    },
+    {
+      "id": "gemischter-salat",
+      "name": {
+        "de": "Gemischter Salat",
+        "en": "Mixed salad"
+      },
+      "category": "salad",
+      "codes": [
+        "E"
+      ],
+      "servings": [
+        {
+          "label": {
+            "de": "Klein",
+            "en": "Small"
+          },
+          "price": 4.9
+        },
+        {
+          "label": {
+            "de": "Groß",
+            "en": "Large"
+          },
+          "price": 6.9
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "tasting-board",
+      "title": {
+        "de": "Tasting-Brett",
+        "en": "Tasting board"
+      },
+      "note": {
+        "de": "Guinness, Kilkenny & Hop House 13, je 0,2 l",
+        "en": "Guinness, Kilkenny & Hop House 13, 0.2 l each"
+      },
+      "price": 7.5,
+      "weekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}
