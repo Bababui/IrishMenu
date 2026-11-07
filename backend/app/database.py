@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from sqlalchemy import create_engine, event
+from sqlalchemy import Engine, create_engine, event
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 # backend/pub.db (next to the app folder), no matter which folder you start the server from
@@ -13,7 +13,8 @@ engine = create_engine(f"sqlite:///{DB_FILE}")
 
 # SQLite ignores foreign keys unless you switch them on, for every connection.
 # Without this, a serving could point to an item that doesn't exist.
-@event.listens_for(engine, "connect")
+# Listening on Engine (not just our engine) also covers the test databases.
+@event.listens_for(Engine, "connect")
 def enable_foreign_keys(dbapi_connection, connection_record):
     dbapi_connection.execute("PRAGMA foreign_keys = ON")
 
