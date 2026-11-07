@@ -45,7 +45,7 @@ class MenuItem(Base):
         back_populates="item", cascade="all, delete-orphan", order_by="Serving.position"
     )
     codes: Mapped[list["ItemCode"]] = relationship(
-        back_populates="item", cascade="all, delete-orphan"
+        back_populates="item", cascade="all, delete-orphan", order_by="ItemCode.id"
     )
 
 

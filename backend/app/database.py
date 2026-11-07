@@ -23,3 +23,9 @@ SessionLocal = sessionmaker(engine)
 
 class Base(DeclarativeBase):
     """Every table class in models.py inherits from this."""
+
+
+def get_session():
+    """Gives each request its own session and closes it afterwards. FastAPI calls this for us."""
+    with SessionLocal() as session:
+        yield session
