@@ -1,10 +1,12 @@
 from fastapi import FastAPI
 
+from . import auth
 from .routers import admin, public
 
 app = FastAPI(title="Irish Pub HN")
 
 app.include_router(public.router)
+app.include_router(auth.router)
 app.include_router(admin.router)
 
 

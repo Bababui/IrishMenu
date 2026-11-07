@@ -1,12 +1,13 @@
 """Endpoints for the admin panel: create, change and delete.
 
-Not protected yet: the login comes in the next step. Until then, never put this online.
+Every endpoint here needs a valid login token (see auth.py).
 """
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
 
+from ..auth import require_admin
 from ..database import get_session
 from ..models import Category, Event, ItemCode, MenuItem, Offer, OfferWeekday, Serving
 from ..schemas import (
@@ -19,7 +20,8 @@ from ..schemas import (
     OfferOut,
 )
 
-router = APIRouter(prefix="/api/admin", tags=["admin"])
+# dependencies=[...] runs require_admin before every endpoint in this router
+router = APIRouter(prefix="/api/admin", tags=["admin"], dependencies=[Depends(require_admin)])
 
 
 def get_or_404(session, model, row_id):
