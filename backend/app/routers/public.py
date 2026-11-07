@@ -1,12 +1,12 @@
 """Endpoints for the guest site. Read-only: anyone can call them, nobody can change anything."""
 
 import datetime as dt
-from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import or_, select
 from sqlalchemy.orm import Session, selectinload
 
+from ..clock import berlin_today
 from ..database import get_session
 from ..models import Category, Event, MenuItem, Offer
 from ..serializers import category_to_dict, event_to_dict, item_to_dict, offer_to_dict
@@ -21,8 +21,7 @@ def cutoff_date():
     still Tuesday night. The frontend knows the opening hours and does the exact cut;
     the backend only throws away what is definitely over.
     """
-    today = dt.datetime.now(ZoneInfo("Europe/Berlin")).date()
-    return today - dt.timedelta(days=1)
+    return berlin_today() - dt.timedelta(days=1)
 
 
 @router.get("/menu")
