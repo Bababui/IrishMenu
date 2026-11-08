@@ -97,6 +97,13 @@ async function request<T>(method: string, path: string, body?: unknown): Promise
     throw new ApiError(0, "Can't reach the server. Check the internet connection and try again.");
   }
 
+  // Our backend always answers with JSON. Anything else (an HTML page from the web host,
+  // e.g. when the backend isn't online) means we didn't reach it at all.
+  const isJson = (response.headers.get("content-type") ?? "").includes("application/json");
+  if (!isJson && response.status !== 204) {
+    throw new ApiError(0, "Can't reach the server. Please try again in a moment.");
+  }
+
   if (response.status === 401 && path !== "/api/admin/login") {
     clearToken();
     window.dispatchEvent(new Event(LOGGED_OUT_EVENT));
