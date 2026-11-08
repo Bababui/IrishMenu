@@ -334,6 +334,76 @@
     0 14px 30px -20px rgb(0 0 0 / 0.8);
 }
 
+/* "Unsere Empfehlung": three drinks side by side, like taps on the bar. */
+.taps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.tap {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto 1fr auto; /* glass, name, note, price: prices line up at the bottom */
+  gap: 0.15rem;
+  padding: 1rem 0.5rem 0.9rem;
+  border-radius: 14px;
+  background: var(--green-800);
+  box-shadow:
+    inset 0 0 0 1px var(--gold-600),
+    0 14px 30px -20px rgb(0 0 0 / 0.8);
+  text-align: center;
+}
+
+.tap-glass {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.35rem;
+  filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.35));
+}
+
+.tap-name {
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+  /* "Käthchenbier" must never break in the middle of a word; if a name is
+     really too long, split it where German splits words: Käthchen-bier */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 26rem) {
+  .tap-name {
+    font-size: 0.9375rem;
+  }
+}
+
+.tap-note {
+  color: var(--mist);
+  font-size: 0.875rem;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.tap-price {
+  align-self: end;
+  padding-top: 0.5rem;
+  display: grid;
+  justify-items: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.tap-size {
+  color: var(--mist);
+  font-size: 0.8125rem;
+}
+
+.tap-price .price {
+  color: var(--gold-400);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
 /* Today and the next six days. Swipes sideways on narrow phones. */
 .day-strip {
   display: grid;

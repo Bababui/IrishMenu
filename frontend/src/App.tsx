@@ -6,6 +6,7 @@ import LangToggle from "./components/LangToggle";
 import Masthead from "./components/Masthead";
 import Menu from "./components/Menu";
 import OpeningHours from "./components/OpeningHours";
+import Recommendations from "./components/Recommendations";
 import SectionNav from "./components/SectionNav";
 import TodaySpecials from "./components/TodaySpecials";
 import Visit from "./components/Visit";
@@ -62,6 +63,7 @@ function App() {
 
       <main>
         <div className="page">
+          <Recommendations items={items} lang={lang} t={t} />
           <TodaySpecials offers={live.offers ?? offers} today={day} hours={pub.hours} lang={lang} t={t} />
         </div>
 
