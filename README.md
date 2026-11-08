@@ -1,27 +1,35 @@
-# Irish Pub Heilbronn – guest page
+# Irish Pub Heilbronn – guest page and admin
 
 The page guests open by scanning the QR code on the table: today's specials, the drinks menu, upcoming events, opening hours, Instagram and contact. German and English.
 
-Built with React, TypeScript and Vite, hosted on Netlify. The menu, specials and events come from the Python backend in `backend/` (FastAPI + SQLite), so the pub can update them in the admin panel without touching code.
+The project has two halves:
+
+| Folder      | What                                                                                   |
+| ----------- | -------------------------------------------------------------------------------------- |
+| `frontend/` | React + TypeScript (Vite): the guest page (`index.html`) and the admin panel (`admin.html`) |
+| `backend/`  | Python (FastAPI + SQLite): stores the menu, specials and events, and the admin login    |
+
+The guest page reads the menu, specials and events from the backend, so the pub can update them in the admin panel without touching code.
 
 ## Run it locally
 
 Two terminals: one for the backend, one for the page.
 
 ```bash
-# Terminal 1: backend (see backend/ for setup)
+# Terminal 1: backend
 cd backend
 source .venv/bin/activate
 fastapi dev app/main.py
 
-# Terminal 2: page
+# Terminal 2: frontend
+cd frontend
 npm install
 npm run dev
 ```
 
-Then open the address it prints (usually http://localhost:5173). Vite passes every `/api/...` request on to the backend on port 8000. Without the backend, the page still works with the built-in copy from `src/content`.
+Then open http://localhost:5173 for the guest page and http://localhost:5173/admin.html for the admin panel. Vite passes every `/api/...` request on to the backend on port 8000. Without the backend, the guest page still works with the built-in copy from `frontend/src/content`.
 
-## Where the content lives
+## Where the content lives (in `frontend/`)
 
 | What                                                            | File                    |
 | --------------------------------------------------------------- | ----------------------- |
@@ -38,7 +46,7 @@ Everything in `src/content` is **example content**. Replace it with the real det
 ## Deploy to Netlify (free plan allows commercial sites)
 
 1. Push this repo to GitHub.
-2. On netlify.com: Add new project → Import from GitHub → pick the repo. Netlify reads `netlify.toml` (build `npm run build`, publish `dist`).
+2. On netlify.com: Add new project → Import from GitHub → pick the repo. Set **Base directory** to `frontend`. Netlify then reads `frontend/netlify.toml` (build `npm run build`, publish `dist`).
 3. Deploy. (The backend needs its own host; see `backend/`.)
 4. Point the QR code at the Netlify address (or the pub's own domain once connected).
 

@@ -12,6 +12,7 @@ from ..database import get_session
 from ..models import Category, Event, ItemCode, MenuItem, Offer, OfferWeekday, Serving
 from ..schemas import (
     CategoryOut,
+    CopyDayIn,
     EventIn,
     EventOut,
     MenuItemIn,
@@ -117,6 +118,22 @@ def delete_offer(offer_id: int, session: Session = Depends(get_session)):
     session.delete(offer)
     session.commit()
 
+
+
+@router.post("/offers/copy-day", response_model=list[OfferOut], status_code=201)
+def copy_day(data: CopyDayIn, session: Session = Depends(get_session)):
+    """Copies the one-off specials of data.from_date to data.to_date ("Same as Monday").
+
+    Rules (tests/test_copy_day.py checks every one):
+    - Only one-off specials, the ones whose date is from_date. Weekly specials
+      repeat by themselves, so they are never copied.
+    - A copy is a new Offer with the same title, note and prices, but date = to_date.
+    - A special whose English title is already on to_date is skipped, so pressing
+      the button twice doesn't create duplicates.
+    - Returns the new offers as a list (OfferOut.from_row), [] if nothing was copied.
+    """
+    # TODO (Giorgi)
+    raise NotImplementedError("copy_day is not written yet")
 
 # ---------- Menu items ----------
 

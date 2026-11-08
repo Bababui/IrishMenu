@@ -145,6 +145,26 @@ class OfferIn(BaseModel):
         return self
 
 
+class CopyDayIn(BaseModel):
+    """ "Same as Monday": copy the specials of one day to another day."""
+
+    from_date: dt.date
+    to_date: dt.date
+
+    @field_validator("to_date")
+    @classmethod
+    def not_in_the_past(cls, value):
+        if value < berlin_today():
+            raise ValueError("This date is in the past")
+        return value
+
+    @model_validator(mode="after")
+    def different_days(self):
+        if self.from_date == self.to_date:
+            raise ValueError("Pick a different day to copy from")
+        return self
+
+
 class OfferOut(BaseModel):
     """What the admin panel gets back. Prices in euros, weekdays as a simple list."""
 
