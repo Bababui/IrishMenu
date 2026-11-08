@@ -1,4 +1,12 @@
-import type { AdminEvent, AdminOffer, EventInput, OfferInput } from "./types";
+import type {
+  AdminCategory,
+  AdminEvent,
+  AdminItem,
+  AdminOffer,
+  AdminServing,
+  EventInput,
+  OfferInput,
+} from "./types";
 
 // Talks to the backend's /api/admin endpoints with the login token.
 
@@ -116,4 +124,10 @@ export const api = {
   createEvent: (event: EventInput) => request<AdminEvent>("POST", "/api/admin/events", event),
   updateEvent: (id: number, event: EventInput) => request<AdminEvent>("PUT", `/api/admin/events/${id}`, event),
   deleteEvent: (id: number) => request<void>("DELETE", `/api/admin/events/${id}`),
+
+  categories: () => request<AdminCategory[]>("GET", "/api/admin/categories"),
+  items: () => request<AdminItem[]>("GET", "/api/admin/items"),
+  /** Changes one price. The price may be typed as "6,90". */
+  changePrice: (servingId: number, price: string | number) =>
+    request<AdminServing>("PATCH", `/api/admin/servings/${servingId}`, { price }),
 };

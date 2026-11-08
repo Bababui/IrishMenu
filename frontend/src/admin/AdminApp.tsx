@@ -3,6 +3,7 @@ import { api, clearToken, getToken, LOGGED_OUT_EVENT } from "./api";
 import DayView from "./DayView";
 import EventForm from "./EventForm";
 import Login from "./Login";
+import MenuPrices from "./MenuPrices";
 import OfferForm from "./OfferForm";
 import Toast, { type ToastMessage } from "./Toast";
 import { today } from "./dates";
@@ -16,6 +17,7 @@ type Screen =
 
 function AdminApp() {
   const [loggedIn, setLoggedIn] = useState(() => getToken() !== null);
+  const [area, setArea] = useState<"days" | "menu">("days");
   const [day, setDay] = useState(today);
   const [screen, setScreen] = useState<Screen>({ kind: "day" });
   const [offers, setOffers] = useState<AdminOffer[] | null>(null);
@@ -85,6 +87,27 @@ function AdminApp() {
             <span className="bar-sign">Irish Pub</span>
             <span className="bar-label">Admin</span>
           </p>
+          <nav className="bar-tabs" aria-label="Admin sections">
+            <button
+              type="button"
+              className="bar-tab"
+              aria-current={area === "days" ? "page" : undefined}
+              onClick={() => {
+                setArea("days");
+                setScreen({ kind: "day" });
+              }}
+            >
+              Specials &amp; events
+            </button>
+            <button
+              type="button"
+              className="bar-tab"
+              aria-current={area === "menu" ? "page" : undefined}
+              onClick={() => setArea("menu")}
+            >
+              Menu &amp; prices
+            </button>
+          </nav>
           <div className="bar-actions">
             <a className="bar-link" href="/" target="_blank" rel="noreferrer">
               See guest page
@@ -97,7 +120,9 @@ function AdminApp() {
       </header>
 
       <main className="shell">
-        {loadError && offers === null ? (
+        {area === "menu" ? (
+          <MenuPrices onToast={setToast} />
+        ) : loadError && offers === null ? (
           <div className="notice notice-error" role="alert">
             <p>{loadError}</p>
             <button type="button" className="button button-secondary" onClick={reload}>

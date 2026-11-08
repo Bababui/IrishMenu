@@ -19,6 +19,8 @@ from ..schemas import (
     MenuItemOut,
     OfferIn,
     OfferOut,
+    PriceIn,
+    ServingOut,
 )
 
 # dependencies=[...] runs require_admin before every endpoint in this router
@@ -132,8 +134,34 @@ def copy_day(data: CopyDayIn, session: Session = Depends(get_session)):
       the button twice doesn't create duplicates.
     - Returns the new offers as a list (OfferOut.from_row), [] if nothing was copied.
     """
-    # TODO (Giorgi)
-    raise NotImplementedError("copy_day is not written yet")
+    # Step 1: which titles are already on the target day?
+    already_there = set(session.scalars(select(Offer.title_en).where(Offer.date == data.to_date)))
+
+    # Step 2: load the originals from the source day
+    originals = session.scalars(select(Offer).where(Offer.date == data.from_date)).all()
+
+    # Step 3: copy each one
+    copies = []
+    for original in originals:
+        if original.title_en in already_there:
+            continue
+        copy = Offer(
+            title_en=original.title_en,
+            title_de=original.title_de,
+            note_en=original.note_en,
+            note_de=original.note_de,
+            price_cents=original.price_cents,
+            regular_price_cents=original.regular_price_cents,
+            date=data.to_date,
+        )
+        session.add(copy)
+        copies.append(copy)
+
+    # Step 4: save everything
+    session.commit()
+
+    # Step 5: send the copies back
+    return [OfferOut.from_row(copy) for copy in copies]
 
 # ---------- Menu items ----------
 
@@ -214,3 +242,16 @@ def delete_item(item_id: int, session: Session = Depends(get_session)):
     item = get_or_404(session, MenuItem, item_id)
     session.delete(item)  # servings and codes go with it (cascade)
     session.commit()
+
+
+@router.patch("/servings/{serving_id}", response_model=ServingOut)
+def change_price(serving_id: int, data: PriceIn, session: Session = Depends(get_session)):
+    """Changes the price of one size of one item, e.g. Guinness 0,5 l: 6,50 -> 6,90.
+
+    PATCH (not PUT) because only one part changes: the label, the name and
+    the other sizes stay exactly as they are.
+    """
+    serving = get_or_404(session, Serving, serving_id)
+    serving.price_cents = to_cents(data.price)
+    session.commit()
+    return ServingOut.from_row(serving)

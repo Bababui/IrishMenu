@@ -247,9 +247,25 @@ class MenuItemIn(BaseModel):
 
 
 class ServingOut(BaseModel):
+    id: int  # the admin panel needs it to change one price
     label_en: str | None
     label_de: str | None
     price: float
+
+    @classmethod
+    def from_row(cls, serving):
+        return cls(
+            id=serving.id,
+            label_en=serving.label_en,
+            label_de=serving.label_de,
+            price=serving.price_cents / 100,
+        )
+
+
+class PriceIn(BaseModel):
+    """A new price for one size of one item, e.g. 6.90 or "6,90"."""
+
+    price: Price
 
 
 class MenuItemOut(BaseModel):
@@ -274,10 +290,7 @@ class MenuItemOut(BaseModel):
             description_en=item.description_en,
             description_de=item.description_de,
             codes=[item_code.code for item_code in item.codes],
-            servings=[
-                ServingOut(label_en=serving.label_en, label_de=serving.label_de, price=serving.price_cents / 100)
-                for serving in item.servings
-            ],
+            servings=[ServingOut.from_row(serving) for serving in item.servings],
         )
 
 

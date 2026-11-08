@@ -33,3 +33,29 @@ export type AdminEvent = {
 };
 
 export type EventInput = Omit<AdminEvent, "id">;
+
+export type AdminCategory = {
+  id: string;
+  menu_group: string;
+  label_en: string;
+  label_de: string | null;
+};
+
+export type AdminServing = {
+  id: number;
+  label_en: string | null;
+  label_de: string | null;
+  price: number;
+};
+
+export type AdminItem = {
+  id: number;
+  category_id: string;
+  position: number;
+  name_en: string;
+  name_de: string | null;
+  description_en: string | null;
+  description_de: string | null;
+  codes: string[];
+  servings: AdminServing[];
+};
