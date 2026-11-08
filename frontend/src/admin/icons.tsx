@@ -74,3 +74,16 @@ export const Check = (p: IconProps) => (
     <path d="m5 12.5 4.5 4.5L19 7.5" {...stroke} />
   </Icon>
 );
+
+export const ChevronDown = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="m6 9 6 6 6-6" {...stroke} />
+  </Icon>
+);
+
+export const PriceTag = (p: IconProps) => (
+  <Icon {...p}>
+    <path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9Z" {...stroke} />
+    <circle cx="7.5" cy="7.5" r="1.5" {...stroke} />
+  </Icon>
+);

@@ -59,3 +59,14 @@ export type AdminItem = {
   codes: string[];
   servings: AdminServing[];
 };
+
+/** What we send to add a drink or dish. Prices may be typed as "6,50". */
+export type ItemInput = {
+  category_id: string;
+  name_en: string;
+  name_de: string | null;
+  description_en: string | null;
+  description_de: string | null;
+  codes: string[];
+  servings: { label_en: string | null; label_de: string | null; price: string | number }[];
+};

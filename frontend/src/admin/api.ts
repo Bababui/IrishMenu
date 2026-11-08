@@ -5,6 +5,7 @@ import type {
   AdminOffer,
   AdminServing,
   EventInput,
+  ItemInput,
   OfferInput,
 } from "./types";
 
@@ -61,9 +62,10 @@ function toApiError(status: number, detail: unknown): ApiError {
   const fields: Record<string, string> = {};
   const general: string[] = [];
   for (const problem of detail as ValidationProblem[]) {
-    const field = problem.loc.length > 1 ? String(problem.loc[1]) : "";
+    // ["body", "servings", 0, "price"] -> "servings.0.price"
+    const field = problem.loc.slice(1).join(".");
     const message = friendly(problem);
-    if (field && field !== "body") fields[field] ??= message;
+    if (field) fields[field] ??= message;
     else general.push(message);
   }
   const summary = general[0] ?? "Please check the fields marked below.";
@@ -127,6 +129,9 @@ export const api = {
 
   categories: () => request<AdminCategory[]>("GET", "/api/admin/categories"),
   items: () => request<AdminItem[]>("GET", "/api/admin/items"),
+  createItem: (item: ItemInput) => request<AdminItem>("POST", "/api/admin/items", item),
+  updateItem: (id: number, item: ItemInput) => request<AdminItem>("PUT", `/api/admin/items/${id}`, item),
+  deleteItem: (id: number) => request<void>("DELETE", `/api/admin/items/${id}`),
   /** Changes one price. The price may be typed as "6,90". */
   changePrice: (servingId: number, price: string | number) =>
     request<AdminServing>("PATCH", `/api/admin/servings/${servingId}`, { price }),
