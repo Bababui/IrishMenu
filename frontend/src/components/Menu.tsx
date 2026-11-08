@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { CATEGORIES, GROUPS } from "../content/menu";
 import type { UiText } from "../i18n";
 import type { Category, Lang, MenuGroup, MenuItem } from "../types";
 import CategoryFilter from "./CategoryFilter";
 import DrinkCard from "./DrinkCard";
-import { Cash, ChevronDown } from "./Icons";
+import { ChevronDown } from "./Icons";
 import SectionHeading from "./SectionHeading";
 
 type MenuProps = {
@@ -18,6 +18,10 @@ function Menu({ drinks, lang, t }: MenuProps) {
   const [selected, setSelected] = useState<MenuGroup>("beer");
   // State: which heading is folded open. Only one at a time, null = all closed.
   const [open, setOpen] = useState<Category | null>(null);
+  // A drawer above the tapped heading closes without sliding (see toggle below).
+  const [closingAbove, setClosingAbove] = useState<Category | null>(null);
+  // The tapped heading and where it was on screen, so we can put it back there.
+  const anchor = useRef<{ heading: HTMLElement; top: number } | null>(null);
 
   // Switching group (Bier -> Whisky) closes the open drawer.
   function selectGroup(group: MenuGroup) {
@@ -26,10 +30,27 @@ function Menu({ drinks, lang, t }: MenuProps) {
   }
 
   // Tap a closed heading to open it (the other one closes), tap it again to close it.
+  //
+  // When the open drawer sits ABOVE the tapped heading, closing it pulls the heading
+  // upwards. Instead of sliding it shut and scrolling along every frame (which judders
+  // on phones), that drawer snaps shut and the page scrolls back once, before the
+  // screen is drawn: the heading stays exactly under the guest's finger.
   function toggle(id: Category, heading: HTMLElement) {
-    setOpen(open === id ? null : id);
-    keepInPlace(heading);
+    const opening = open !== id;
+    const openIsAbove = opening && open !== null && visible.findIndex((c) => c.id === open) < visible.findIndex((c) => c.id === id);
+    setClosingAbove(openIsAbove ? open : null);
+    anchor.current = openIsAbove ? { heading, top: heading.getBoundingClientRect().top } : null;
+    setOpen(opening ? id : null);
   }
+
+  // Runs after React changed the page but before the browser draws it.
+  useLayoutEffect(() => {
+    if (!anchor.current) return;
+    const { heading, top } = anchor.current;
+    anchor.current = null;
+    const drift = heading.getBoundingClientRect().top - top;
+    if (drift !== 0) window.scrollBy({ top: drift, behavior: "instant" });
+  }, [open]);
 
   // Only categories that have items, and only groups that have such categories.
   const categories = CATEGORIES.filter((c) =>
@@ -76,7 +97,7 @@ function Menu({ drinks, lang, t }: MenuProps) {
               {/* Always rendered so it can slide open; `inert` hides it from taps and screen readers while closed. */}
               <div
                 id={panelId}
-                className={`menu-group-panel${isOpen ? " is-open" : ""}`}
+                className={`menu-group-panel${isOpen ? " is-open" : ""}${closingAbove === category.id ? " snap" : ""}`}
                 inert={!isOpen}
               >
                 <div className="menu-group-inner">
@@ -91,32 +112,8 @@ function Menu({ drinks, lang, t }: MenuProps) {
           );
         })}
       </div>
-
-      {/* Important before ordering, so it sits right under the menu. */}
-      <p className="cash-note">
-        <Cash className="cash-note-icon" />
-        {t.cashOnly}
-      </p>
     </section>
   );
-}
-
-/**
- * While the drawer above slides shut, the page would pull the tapped heading
- * upwards. For the length of the animation, scroll along with it every frame
- * so the heading stays exactly under the guest's finger.
- */
-function keepInPlace(heading: HTMLElement) {
-  const startTop = heading.getBoundingClientRect().top;
-  const stopAt = performance.now() + 500; // a bit longer than the CSS transition
-  const step = () => {
-    const drift = heading.getBoundingClientRect().top - startTop;
-    if (Math.abs(drift) >= 1) {
-      window.scrollBy({ top: drift, behavior: "instant" });
-    }
-    if (performance.now() < stopAt) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
 }
 
 export default Menu;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Events from "./components/Events";
+import { Cash } from "./components/Icons";
 import LangToggle from "./components/LangToggle";
 import Masthead from "./components/Masthead";
 import Menu from "./components/Menu";
@@ -13,7 +14,7 @@ import { drinks } from "./content/menu";
 import { offers } from "./content/offers";
 import { pub, USES_EXAMPLE_CONTENT } from "./content/pub";
 import { ui, useLang } from "./i18n";
-import { offersForDay, upcomingEvents } from "./lib/content";
+import { upcomingEvents } from "./lib/content";
 import { fetchLiveContent, type LiveContent } from "./lib/api";
 import { berlinNow, openStatus, pubDay } from "./lib/time";
 import type { Page } from "./types";
@@ -31,7 +32,6 @@ function App() {
   const day = pubDay(now);
   const status = openStatus(pub.hours, now);
   const items = live.items ?? drinks;
-  const todaysOffers = offersForDay(live.offers ?? offers, day);
   const nextEvents = upcomingEvents([...regularEvents, ...(live.events ?? [])], day.ymd);
 
   const navItems: {id: Page; label: string}[] = [
@@ -62,12 +62,18 @@ function App() {
 
       <main>
         <div className="page">
-          <TodaySpecials offers={todaysOffers} day={day.ymd} lang={lang} t={t} />
+          <TodaySpecials offers={live.offers ?? offers} today={day} hours={pub.hours} lang={lang} t={t} />
         </div>
 
         <SectionNav items={navItems} active={page} onSelect={selectPage} label={pub.name} />
 
         <div className="page" id="page-content">
+          {/* Important before ordering, so it sits right under the tabs, on every tab. */}
+          <p className="cash-note">
+            <Cash className="cash-note-icon" />
+            {t.cashOnly}
+          </p>
+
           <div key={page} className="page-view">
             {page === "menu" && <Menu drinks={items} lang={lang} t={t} />}
             {page === "events" && <Events events={nextEvents} day={day.ymd} lang={lang} t={t} />}
