@@ -8,28 +8,31 @@ import OpeningHours from "./components/OpeningHours";
 import SectionNav from "./components/SectionNav";
 import TodaySpecials from "./components/TodaySpecials";
 import Visit from "./components/Visit";
-import { events } from "./content/events";
+import { events as regularEvents } from "./content/events";
 import { drinks } from "./content/menu";
 import { offers } from "./content/offers";
 import { pub, USES_EXAMPLE_CONTENT } from "./content/pub";
 import { ui, useLang } from "./i18n";
 import { offersForDay, upcomingEvents } from "./lib/content";
-import { fetchSheet, toEvents, toOffers } from "./lib/sheet";
+import { fetchLiveContent, type LiveContent } from "./lib/api";
 import { berlinNow, openStatus, pubDay } from "./lib/time";
-import type { Offer, Page ,PubEvent } from "./types";
+import type { Page } from "./types";
 
 function App() {
   const [lang, setLang] = useLang();
   const t = ui[lang];
   const now = useBerlinNow();
-  const sheet = useSheetContent();
+  const live = useLiveContent();
 
   // Everything below is calculated from `now` on each render, not stored in state.
-  // Specials and events come from the Google Sheet when it's set up, otherwise from src/content.
+  // Menu, specials and events come from the backend. Until it answers (or if it can't be
+  // reached) the page shows the built-in copy from src/content, so guests never see an empty menu.
+  // Regular events like karaoke are a rule in src/content/events.ts; one-off events come from the backend.
   const day = pubDay(now);
   const status = openStatus(pub.hours, now);
-  const todaysOffers = offersForDay(sheet.offers ?? offers, day);
-  const nextEvents = upcomingEvents(sheet.events ?? events, day.ymd);
+  const items = live.items ?? drinks;
+  const todaysOffers = offersForDay(live.offers ?? offers, day);
+  const nextEvents = upcomingEvents([...regularEvents, ...(live.events ?? [])], day.ymd);
 
   const navItems: {id: Page; label: string}[] = [
     { id: "menu", label: t.navMenu },
@@ -66,7 +69,7 @@ function App() {
 
         <div className="page" id="page-content">
           <div key={page} className="page-view">
-            {page === "menu" && <Menu drinks={drinks} lang={lang} t={t} />}
+            {page === "menu" && <Menu drinks={items} lang={lang} t={t} />}
             {page === "events" && <Events events={nextEvents} day={day.ymd} lang={lang} t={t} />}
             {page === "hours" && <OpeningHours hours={pub.hours} today={day.weekday} lang={lang} t={t} />}
           </div>
@@ -80,24 +83,15 @@ function App() {
   );
 }
 
-/** Loads specials and events from the Google Sheet once. `undefined` = use the built-in content. */
-function useSheetContent() {
-  const [content, setContent] = useState<{
-    offers?: Offer[];
-    events?: PubEvent[];
-  }>({});
+/** Loads the live content from the backend once, when the page opens. */
+function useLiveContent() {
+  const [content, setContent] = useState<LiveContent>({});
 
   useEffect(() => {
-    let cancelled = false;
-    Promise.all([fetchSheet("offers"), fetchSheet("events")]).then(
-      ([offersCsv, eventsCsv]) => {
-        if (cancelled) return;
-        setContent({
-          offers: offersCsv !== null ? toOffers(offersCsv) : undefined,
-          events: eventsCsv !== null ? toEvents(eventsCsv) : undefined,
-        });
-      },
-    );
+    let cancelled = false; // the page may close before the answer arrives
+    fetchLiveContent().then((result) => {
+      if (!cancelled) setContent(result);
+    });
     return () => {
       cancelled = true;
     };
