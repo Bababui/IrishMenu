@@ -19,7 +19,7 @@ export const recommendations: Recommendation[] = [
     name: "Guinness",
     category: "draught",
     glass: "stout",
-    note: { de: "Irish Stout vom Fass", en: "Irish stout on draught" },
+    note: { de: "Irish Stout", en: "Irish stout" },
   },
   {
     name: "Käthchenbier",
@@ -31,6 +31,6 @@ export const recommendations: Recommendation[] = [
     name: "Hop House 13",
     category: "draught",
     glass: "hops",
-    note: { de: "Irish Lager vom Fass", en: "Irish lager on draught" },
+    note: { de: "Irish Lager", en: "Irish lager" },
   },
 ];
