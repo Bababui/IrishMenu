@@ -1307,3 +1307,28 @@ select.input {
     width: calc(50% - 0.65rem);
   }
 }
+
+/* Code buttons with their meaning ("A · Gluten"), once content/codes.ts is filled in */
+.code-grid.has-meanings {
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+}
+
+.code-grid.has-meanings .code-button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.8rem;
+  text-align: left;
+}
+
+.code-letter {
+  flex: none;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+.code-meaning {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}

@@ -6,9 +6,13 @@ import type { MenuItem, Lang } from "../types";
 type DrinkCardProps = {
   drink: MenuItem;
   lang: Lang;
+  /** When set, the codes become a button that opens the legend at the end of the menu. */
+  onShowCodes?: () => void;
+  /** Read out to screen readers on that button, e.g. "Kennzeichnung erklären". */
+  showCodesLabel?: string;
 };
 
-function DrinkCard({ drink, lang }: DrinkCardProps) {
+function DrinkCard({ drink, lang, onShowCodes, showCodesLabel }: DrinkCardProps) {
   return (
     <li className="drink">
       <p className="drink-name">
@@ -17,7 +21,20 @@ function DrinkCard({ drink, lang }: DrinkCardProps) {
           {drink.codes && (
             <>
               {" "}
-              <sup className="drink-codes">{drink.codes.join(", ")}</sup>
+              {onShowCodes ? (
+                <sup>
+                  <button
+                    type="button"
+                    className="drink-codes drink-codes-button"
+                    onClick={onShowCodes}
+                    aria-label={`${drink.codes.join(", ")}: ${showCodesLabel ?? ""}`}
+                  >
+                    {drink.codes.join(", ")}
+                  </button>
+                </sup>
+              ) : (
+                <sup className="drink-codes">{drink.codes.join(", ")}</sup>
+              )}
             </>
           )}
         </span>

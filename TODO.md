@@ -4,7 +4,7 @@ Things we decided to deal with later. Tick them off (`[x]`) as they get done.
 
 ## Content and legal
 
-- [ ] **Allergen and additive codes:** get the legend from the paper menu (e.g. "3 = mit Farbstoff", "A = glutenhaltiges Getreide").
+- [x] **Allergen and additive codes:** legend from the paper menu is in `frontend/src/content/codes.ts`.
   - Admin: show the meaning next to each code button ("A · Gluten" instead of just "A").
   - Guest page: explain the codes; in Germany guests must be able to see what they mean.
 - [ ] **Impressum and Datenschutzerklärung:** ask the boss for the company details (full name, owner, address, contact) and add both pages.

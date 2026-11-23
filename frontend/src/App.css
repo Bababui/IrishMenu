@@ -815,6 +815,76 @@
   line-height: 0; /* keeps the raised codes from making the line taller */
 }
 
+/* With a complete legend, the codes are a button that opens it at the end of the menu. */
+.drink-codes-button {
+  padding: 0.35rem 0.25rem;
+  margin: -0.35rem -0.25rem;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--gold-400);
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.drink-codes-button:hover {
+  color: var(--gold-300);
+}
+
+/* "Zusatzstoffe & Allergene": the last drawer of the menu, like a printed menu's footnotes. */
+.menu-group--legend .menu-group-toggle {
+  scroll-margin-top: calc(var(--nav-height) + 0.5rem);
+}
+
+.menu-group--legend .menu-group-title {
+  color: var(--mist);
+  font-weight: 600;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem 1.75rem;
+  padding: 0.5rem 0 1.25rem;
+}
+
+.legend-title {
+  margin-bottom: 0.4rem;
+  color: var(--gold-300);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.legend-list {
+  margin: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.legend-row {
+  display: grid;
+  grid-template-columns: 1.6rem minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+}
+
+.legend-code {
+  color: var(--gold-400);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.legend-row dd {
+  margin: 0;
+  color: var(--white);
+}
+
 .drink-leader {
   flex: 1;
   min-width: 1rem;

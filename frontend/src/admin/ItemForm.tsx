@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { meaningOf } from "../content/codes";
 import { GROUPS } from "../content/menu";
 import { api, ApiError } from "./api";
 import { priceField } from "./dates";
@@ -11,6 +12,20 @@ const ADDITIVES = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const ALLERGENS = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
 
 type SizeRow = { key: number; label: string; labelDe: string; price: string };
+
+// Once the legend is filled in (content/codes.ts), the buttons show what each code means
+const hasMeanings = [...ADDITIVES, ...ALLERGENS].some((code) => meaningOf(code, "en"));
+
+/** One code toggle: "A" alone, or "A · Gluten" once the meaning is known. */
+function CodeButton({ code, pressed, onToggle }: { code: string; pressed: boolean; onToggle: (code: string) => void }) {
+  const meaning = meaningOf(code, "en");
+  return (
+    <button type="button" className="weekday code-button" aria-pressed={pressed} onClick={() => onToggle(code)}>
+      <span className="code-letter">{code}</span>
+      {meaning && <span className="code-meaning">{meaning}</span>}
+    </button>
+  );
+}
 
 let nextKey = 1;
 const emptySize = (): SizeRow => ({ key: nextKey++, label: "", labelDe: "", price: "" });
@@ -155,21 +170,17 @@ function ItemForm({ categories, categoryId, item, onCancel, onSaved }: ItemFormP
 
       <fieldset className="codes">
         <legend className="field-label">Allergens and additives (optional)</legend>
-        <p className="field-hint">Tick the codes from the legend on the paper menu.</p>
+        <p className="field-hint">Tick everything this drink or dish contains.</p>
         <p className="codes-label">Additives</p>
-        <div className="code-grid">
+        <div className={`code-grid${hasMeanings ? " has-meanings" : ""}`}>
           {ADDITIVES.map((code) => (
-            <button key={code} type="button" className="weekday" aria-pressed={codes.includes(code)} onClick={() => toggleCode(code)}>
-              {code}
-            </button>
+            <CodeButton key={code} code={code} pressed={codes.includes(code)} onToggle={toggleCode} />
           ))}
         </div>
         <p className="codes-label">Allergens</p>
-        <div className="code-grid">
+        <div className={`code-grid${hasMeanings ? " has-meanings" : ""}`}>
           {ALLERGENS.map((code) => (
-            <button key={code} type="button" className="weekday" aria-pressed={codes.includes(code)} onClick={() => toggleCode(code)}>
-              {code}
-            </button>
+            <CodeButton key={code} code={code} pressed={codes.includes(code)} onToggle={toggleCode} />
           ))}
         </div>
         {fieldError("codes") && <p className="field-error">{fieldError("codes")}</p>}
