@@ -63,9 +63,7 @@ function App() {
 
       <main>
         <div className="page">
-          <Recommendations items={items} lang={lang} t={t} />
-
-          {/* Important before ordering, so guests see it before the specials. */}
+          {/* Important before ordering, right under the sign, before anything else. */}
           <p className="cash-note">
             <span className="cash-note-badge" aria-hidden>
               <Cash className="cash-note-icon" />
@@ -75,6 +73,8 @@ function App() {
               <span className="cash-note-detail">{t.cashOnlyDetail}</span>
             </span>
           </p>
+
+          <Recommendations items={items} lang={lang} t={t} />
 
           <TodaySpecials offers={live.offers ?? offers} today={day} hours={pub.hours} lang={lang} t={t} />
         </div>

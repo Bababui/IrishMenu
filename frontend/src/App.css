@@ -854,14 +854,14 @@
 }
 
 /* Cash only: important before ordering, so it closes the menu. */
-/* Cash only: a brass plaque between the recommendations and the specials.
+/* Cash only: a brass plaque right under the sign, above "Beliebteste Produkte".
    Gold like the sign's lettering, with a dashed inner line so it reads as a notice, not a button. */
 .cash-note {
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
   padding: 1rem 1.1rem;
   border-radius: 14px;
   background: var(--gold-400);

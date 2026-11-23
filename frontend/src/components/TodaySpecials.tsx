@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { UiText } from "../i18n";
-import { offersForDay } from "../lib/content";
+import { isEverydayOffer, offersForDay } from "../lib/content";
 import { dateParts, formatPrice, longDate } from "../lib/format";
 import { addDays } from "../lib/time";
 import type { Lang, Offer, Weekday, WeekHours } from "../types";
@@ -53,11 +53,13 @@ function TodaySpecials({ offers, today, hours, lang, t }: TodaySpecialsProps) {
           <Leprechaun className="leprechaun" />
         </span>
 
-        {/* Today and the coming days. Swipe sideways on a phone; a clover marks days with specials. */}
+        {/* Today and the coming days. Swipe sideways on a phone. A clover marks days with a special
+            beyond the everyday ones (the Tasting-Brett is on every open day, so it doesn't count). */}
         <div className="day-strip" role="group" aria-label={t.pickDay}>
           {days.map((d, i) => {
             const parts = dateParts(d.ymd, lang);
             const count = d.offers.length;
+            const hasClover = d.offers.some((offer) => !isEverydayOffer(offer, hours));
             return (
               <button
                 key={d.ymd}
@@ -73,7 +75,7 @@ function TodaySpecials({ offers, today, hours, lang, t }: TodaySpecialsProps) {
                 <span className="day-chip-weekday">{i === 0 ? t.today : parts.weekday.replace(".", "")}</span>
                 <span className="day-chip-day">{parts.day}</span>
                 <span className="day-chip-mark" aria-hidden>
-                  {count > 0 && <Clover className="day-chip-clover" />}
+                  {hasClover && <Clover className="day-chip-clover" />}
                 </span>
               </button>
             );
