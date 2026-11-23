@@ -292,7 +292,9 @@
   margin-bottom: 1.1rem;
   font-family: var(--font-sign);
   font-weight: 400;
-  font-size: 1.375rem;
+  /* Full size from about 440px wide. Narrower phones scale all headings down together, so the
+     longest one ("Beliebteste Produkte") stays on one line with room for the knot band. */
+  font-size: clamp(0.875rem, calc(6.73vw - 7.7px), 1.375rem);
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--gold-400);
@@ -377,8 +379,17 @@
 }
 
 @media (max-width: 26rem) {
+  .tap {
+    padding-inline: 0.35rem;
+  }
+
   .tap-name {
     font-size: 0.9375rem;
+  }
+
+  /* So short notes like "Aus Heilbronn" stay on one line on phones */
+  .tap-note {
+    font-size: 0.8125rem;
   }
 }
 

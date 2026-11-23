@@ -25,7 +25,7 @@ export const recommendations: Recommendation[] = [
     name: "Käthchenbier",
     category: "draught",
     glass: "lager",
-    note: { de: "Vom Fass", en: "On draught" },
+    note: { de: "Aus Heilbronn", en: "From Heilbronn" },
   },
   {
     name: "Hop House 13",
