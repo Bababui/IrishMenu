@@ -1,6 +1,6 @@
 import type { Category, Localized } from "../types";
 
-// "Unsere Empfehlung": three drinks the pub recommends, shown right under the sign.
+// "Beliebteste Produkte": three drinks the pub recommends, shown right under the sign.
 // Each one is looked up on the live menu by name and heading, so the price is always
 // the current one. If a drink is removed from the menu, its card disappears by itself.
 // To change a recommendation, change this list (the boss can use specials for one-off tips).

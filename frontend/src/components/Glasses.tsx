@@ -1,4 +1,4 @@
-// Small drawn glasses for "Unsere Empfehlung". Original drawings, no brand marks.
+// Small drawn glasses for "Beliebteste Produkte". Original drawings, no brand marks.
 
 type GlassProps = { className?: string };
 

@@ -14,7 +14,7 @@ type RecommendationsProps = {
   t: UiText;
 };
 
-/** "Unsere Empfehlung": three drinks from the menu, each with a small drawn glass. */
+/** "Beliebteste Produkte": three drinks from the menu, each with a small drawn glass. */
 function Recommendations({ items, lang, t }: RecommendationsProps) {
   const cards = recommendations.flatMap((rec) => {
     const item = items.find((i) => i.category === rec.category && localize(i.name, "de") === rec.name);
