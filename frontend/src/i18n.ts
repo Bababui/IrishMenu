@@ -90,15 +90,30 @@ export const ui = {
 
 export type UiText = (typeof ui)["de"];
 
-/**
- * Current language + a setter. Every visit starts in German; guests switch to English
- * with the DE | EN toggle. The choice is not remembered, so the next visit is German again.
- */
+const STORAGE_KEY = "pub-lang";
+
+function initialLang(): Lang {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "de" || saved === "en") return saved;
+  } catch {
+    // Storage can be blocked (private mode). Then just start in German.
+  }
+  // First visit: always German. Guests switch to English with the DE | EN toggle.
+  return "de";
+}
+
+/** Current language + a setter. Remembers the choice and updates <html lang>. */
 export function useLang() {
-  const [lang, setLang] = useState<Lang>("de");
+  const [lang, setLang] = useState<Lang>(initialLang);
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      // Not critical if it can't be saved.
+    }
   }, [lang]);
 
   return [lang, setLang] as const;
