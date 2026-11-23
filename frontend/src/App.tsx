@@ -64,18 +64,24 @@ function App() {
       <main>
         <div className="page">
           <Recommendations items={items} lang={lang} t={t} />
+
+          {/* Important before ordering, so guests see it before the specials. */}
+          <p className="cash-note">
+            <span className="cash-note-badge" aria-hidden>
+              <Cash className="cash-note-icon" />
+            </span>
+            <span className="cash-note-text">
+              <strong className="cash-note-title">{t.cashOnly}</strong>
+              <span className="cash-note-detail">{t.cashOnlyDetail}</span>
+            </span>
+          </p>
+
           <TodaySpecials offers={live.offers ?? offers} today={day} hours={pub.hours} lang={lang} t={t} />
         </div>
 
         <SectionNav items={navItems} active={page} onSelect={selectPage} label={pub.name} />
 
         <div className="page" id="page-content">
-          {/* Important before ordering, so it sits right under the tabs, on every tab. */}
-          <p className="cash-note">
-            <Cash className="cash-note-icon" />
-            {t.cashOnly}
-          </p>
-
           <div key={page} className="page-view">
             {page === "menu" && <Menu drinks={items} lang={lang} t={t} />}
             {page === "events" && <Events events={nextEvents} day={day.ymd} lang={lang} t={t} />}
