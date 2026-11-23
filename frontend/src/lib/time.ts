@@ -56,7 +56,7 @@ export function pubDay(now: Now): { weekday: Weekday; ymd: string } {
 }
 
 /** "17:30" -> 1050 */
-export function toMinutes(hhmm: string): number {
+function toMinutes(hhmm: string): number {
   const [h, m] = hhmm.split(":").map(Number);
   return h * 60 + m;
 }

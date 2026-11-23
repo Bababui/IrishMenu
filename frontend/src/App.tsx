@@ -13,7 +13,7 @@ import Visit from "./components/Visit";
 import { events as regularEvents } from "./content/events";
 import { drinks } from "./content/menu";
 import { offers } from "./content/offers";
-import { pub, USES_EXAMPLE_CONTENT } from "./content/pub";
+import { pub } from "./content/pub";
 import { ui, useLang } from "./i18n";
 import { upcomingEvents } from "./lib/content";
 import { fetchLiveContent, type LiveContent } from "./lib/api";
@@ -88,11 +88,9 @@ function App() {
             {page === "hours" && <OpeningHours hours={pub.hours} today={day.weekday} lang={lang} t={t} />}
           </div>
 
-          <Visit pub={pub} t={t} showExampleNote={USES_EXAMPLE_CONTENT} />
+          <Visit pub={pub} t={t} />
         </div>
       </main>
-
-
     </>
   );
 }

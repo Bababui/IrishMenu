@@ -5,7 +5,6 @@ import type { Lang } from "./types";
 // Content texts (drinks, offers, events) live in src/content.
 export const ui = {
   de: {
-    navToday: "Heute",
     navMenu: "Karte",
     navEvents: "Events",
     navHours: "Zeiten",
@@ -48,10 +47,8 @@ export const ui = {
     imprint: "Impressum",
     privacy: "Datenschutz",
     langLabel: "Sprache",
-    exampleNote: "Beispielinhalte – vor dem Start ersetzen",
   },
   en: {
-    navToday: "Today",
     navMenu: "Menu",
     navEvents: "Events",
     navHours: "Hours",
@@ -92,7 +89,6 @@ export const ui = {
     imprint: "Legal notice",
     privacy: "Privacy",
     langLabel: "Language",
-    exampleNote: "Example content – replace before launch",
   },
 } satisfies Record<Lang, Record<string, string>>;
 

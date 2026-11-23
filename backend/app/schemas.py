@@ -23,6 +23,7 @@ from pydantic import (
 )
 
 from .clock import berlin_today
+from .serializers import euros
 
 
 def empty_to_none(value):
@@ -137,7 +138,7 @@ class OfferIn(BaseModel):
         if self.date is None and len(self.weekdays) == 0:
             raise ValueError("Please fill in a date or at least one weekday")
         return self
-    
+
     @model_validator(mode="after")
     def price_rule(self):
         if self.price is not None and self.regular_price is not None and self.price >= self.regular_price:
@@ -188,8 +189,8 @@ class OfferOut(BaseModel):
             title_de=offer.title_de,
             note_en=offer.note_en,
             note_de=offer.note_de,
-            price=None if offer.price_cents is None else offer.price_cents / 100,
-            regular_price=None if offer.regular_price_cents is None else offer.regular_price_cents / 100,
+            price=euros(offer.price_cents),
+            regular_price=euros(offer.regular_price_cents),
             date=offer.date,
             weekdays=[offer_weekday.weekday for offer_weekday in offer.weekdays],
         )
@@ -258,7 +259,7 @@ class ServingOut(BaseModel):
             id=serving.id,
             label_en=serving.label_en,
             label_de=serving.label_de,
-            price=serving.price_cents / 100,
+            price=euros(serving.price_cents),
         )
 
 

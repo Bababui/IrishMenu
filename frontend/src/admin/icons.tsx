@@ -69,12 +69,6 @@ export const Repeat = (p: IconProps) => (
   </Icon>
 );
 
-export const Check = (p: IconProps) => (
-  <Icon {...p}>
-    <path d="m5 12.5 4.5 4.5L19 7.5" {...stroke} />
-  </Icon>
-);
-
 export const ChevronDown = (p: IconProps) => (
   <Icon {...p}>
     <path d="m6 9 6 6 6-6" {...stroke} />

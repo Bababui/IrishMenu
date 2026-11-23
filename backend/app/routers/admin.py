@@ -121,7 +121,6 @@ def delete_offer(offer_id: int, session: Session = Depends(get_session)):
     session.commit()
 
 
-
 @router.post("/offers/copy-day", response_model=list[OfferOut], status_code=201)
 def copy_day(data: CopyDayIn, session: Session = Depends(get_session)):
     """Copies the one-off specials of data.from_date to data.to_date ("Same as Monday").
@@ -162,6 +161,7 @@ def copy_day(data: CopyDayIn, session: Session = Depends(get_session)):
 
     # Step 5: send the copies back
     return [OfferOut.from_row(copy) for copy in copies]
+
 
 # ---------- Menu items ----------
 

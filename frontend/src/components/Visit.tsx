@@ -6,11 +6,10 @@ import SectionHeading from "./SectionHeading";
 type VisitProps = {
   pub: PubInfo;
   t: UiText;
-  showExampleNote: boolean;
 };
 
 /** Instagram, address, phone and the legal links at the end of the page. */
-function Visit({ pub, t, showExampleNote }: VisitProps) {
+function Visit({ pub, t }: VisitProps) {
   const instagramUrl = `https://www.instagram.com/${pub.instagram}/`;
 
   return (
@@ -70,7 +69,6 @@ function Visit({ pub, t, showExampleNote }: VisitProps) {
           <span aria-hidden>·</span>
           <a href={pub.legal.privacyUrl}>{t.privacy}</a>
         </p>
-        {showExampleNote && <p className="footer-example">{t.exampleNote}</p>}
       </footer>
     </section>
   );

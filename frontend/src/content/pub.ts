@@ -1,8 +1,5 @@
 import type { PubInfo } from "../types";
 
-/** Shows a small "example content" note in the footer. Set to false once the real content is in. */
-export const USES_EXAMPLE_CONTENT = false;
-
 export const pub: PubInfo = {
   name: "Irish Pub",
   town: "Heilbronn",

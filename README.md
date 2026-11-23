@@ -15,6 +15,19 @@ The guest page reads the menu, specials and events from the backend, so the pub 
 
 Two terminals: one for the backend, one for the page.
 
+The first time only, set up the backend:
+
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m app.seed           # creates pub.db with the menu (deletes an existing one!)
+python -m app.set_password   # the admin password
+```
+
+Then, every time:
+
 ```bash
 # Terminal 1: backend
 cd backend
@@ -38,17 +51,16 @@ Then open http://localhost:5173 for the guest page and http://localhost:5173/adm
 | Menu groups and categories                                      | `src/content/menu.ts`   |
 | Specials (live: backend; built-in fallback copy)                | `src/content/offers.ts` |
 | Regular events like karaoke (one-off events: backend)           | `src/content/events.ts` |
+| "Most popular" (Guinness, Käthchenbier, Hop House 13)           | `src/content/recommendations.ts` |
+| Additive and allergen codes (1–9, A–I)                          | `src/content/codes.ts`  |
 | Interface texts in German and English                           | `src/i18n.ts`           |
 | Colours and fonts                                               | top of `src/index.css`  |
 
-Everything in `src/content` is **example content**. Replace it with the real details, then set `USES_EXAMPLE_CONTENT = false` in `src/content/pub.ts` to remove the note in the footer.
+Once the boss edits in the admin panel, the database is the real menu. The files in `src/content` are the starting data for `python -m app.seed` and the copy guests see if the backend can't be reached. After changing them, copy them over to the backend with `npx tsx scripts/export-content.ts` (run in `frontend/`).
 
-## Deploy to Netlify (free plan allows commercial sites)
+## Going online
 
-1. Push this repo to GitHub.
-2. On netlify.com: Add new project → Import from GitHub → pick the repo. Set **Base directory** to `frontend`. Netlify then reads `frontend/netlify.toml` (build `npm run build`, publish `dist`).
-3. Deploy. (The backend needs its own host; see `backend/`.)
-4. Point the QR code at the Netlify address (or the pub's own domain once connected).
+One IONOS server will run both halves under the pub's domain. The steps are in `TODO.md`. `frontend/netlify.toml` is only for the current Netlify demo and can go once the server is live.
 
 ## Project notes
 
