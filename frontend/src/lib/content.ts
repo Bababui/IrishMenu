@@ -15,8 +15,9 @@ export function offersForDay(
  * True for a special that is on every day the pub is open, like the Tasting-Brett.
  * Those don't earn a day its clover: the clover marks days with something extra.
  */
-export function isEverydayOffer(offer: Offer, hours: WeekHours): boolean {
-  const openDays = hours.flatMap((h, weekday) => (h ? [weekday as Weekday] : []));
+export function isEverydayOffer(offer: { weekdays?: number[] }, hours: WeekHours): boolean {
+  // Used by the guest page and the admin panel, so both show the clover on the same days.
+  const openDays = hours.flatMap((h, weekday) => (h ? [weekday] : []));
   return openDays.length > 0 && openDays.every((d) => offer.weekdays?.includes(d));
 }
 

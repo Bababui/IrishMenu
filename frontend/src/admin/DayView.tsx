@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Clover } from "../components/Icons";
+import { pub } from "../content/pub";
+import { isEverydayOffer } from "../lib/content";
 import { api, ApiError } from "./api";
 import {
   addDays,
@@ -92,7 +94,10 @@ function WeekStrip({
       </button>
       <ol className="week-days">
         {week.map((date) => {
-          const specialCount = offers ? offersOn(offers, date).length : 0;
+          const dayOffers = offers ? offersOn(offers, date) : [];
+          const specialCount = dayOffers.length;
+          // Same rule as the guest page: specials on every open day (the Tasting-Brett) earn no clover.
+          const hasClover = dayOffers.some((offer) => !isEverydayOffer(offer, pub.hours));
           const eventCount = events ? eventsOn(events, date).length : 0;
           const summary = [
             specialCount ? `${specialCount} special${specialCount > 1 ? "s" : ""}` : "",
@@ -116,7 +121,7 @@ function WeekStrip({
                 <span className="tile-day">{dayNumber(date)}</span>
                 <span className="tile-month">{shortMonth(date)}</span>
                 <span className="tile-marks" aria-hidden>
-                  {specialCount > 0 && <Clover className="tile-clover" />}
+                  {hasClover && <Clover className="tile-clover" />}
                   {eventCount > 0 && <CalendarIcon className="tile-event" />}
                 </span>
               </button>
